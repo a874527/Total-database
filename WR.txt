@@ -1,0 +1,3277 @@
+购买物品
+BuyMerchantItem(4,1);
+
+骑术开关
+wManager.wManagerSetting.CurrentSetting.UseMount = false;
+wManager.wManagerSetting.CurrentSetting.MinFreeBagSlotsToGoToTown = 2
+下马
+if (ObjectManager.Me.IsMounted) 
+{
+MovementManager.StopMove();
+wManager.Wow.Helpers.Lua.RunMacroText("/RandomMount");
+Thread.Sleep(3000);
+}
+
+主动攻击开关
+wManager.wManagerSetting.CurrentSetting.AttackBeforeBeingAttacked = false;
+wManager.wManagerSetting.CurrentSetting.CanAttackUnitsAlreadyInFight = false;
+判断人物当前地图
+
+return (wManager.Wow.Helpers.Usefuls.ContinentId == (int)wManager.Wow.Enums.ContinentId.Expansion01);
+
+//指定地点直接与物品互动
+
+if (!ObjectManager.Me.InCombat) 
+{
+while (!Quest.IsObjectiveComplete(1,992))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(new Vector3(-12148.3, 636.767, -70.0585), 58); 
+}
+}
+
+
+//身上有BUFF
+
+if (ObjectManager.Me.TargetObject.HaveBuff(37642)) 
+{
+while (!Quest.IsObjectiveComplete(1,10607))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(new Vector3(-12148.3, 636.767, -70.0585), 58); 
+}
+}
+
+
+//任务完成获得物品
+return !Quest.GetQuestCompleted(184) && ItemsManager.GetItemCountById(16333) >= 1;
+
+
+//判断是否有任务
+if
+(Quest.HasQuest(9939)
+&& 
+!Quest.GetQuestCompleted(9939)) 
+
+//判断当前地图
+return (wManager.Wow.Helpers.Usefuls.ContinentId == (int)wManager.Wow.Enums.ContinentId.Expansion01);
+//判断是否有物品
+if 
+wManager.Wow.Helpers.ItemsManager.HasItemById(10000)
+
+//得到物品判断
+return ItemsManager.GetItemCountById(34024) >= 1;
+return ObjectManager.Me.TargetObject.HaveBuff(22807);
+
+return (ItemsManager.GetItemCountById(33778) >= 1 && ItemsManager.GetItemCountById(33779) >= 1 && ItemsManager.GetItemCountById(33780) >= 1);
+
+//杀怪判定
+return ObjectManager.GetWoWUnitByEntry(21446).Count == 0;
+
+//如果XX任务没有完成
+!Ques?t.IsObjectiveComplete(1,9839)
+goto XX
+endif
+//停止不动
+if (ObjectManager.Me.IsMounted) {
+MovementManager.StopMove();
+wManager.Wow.Helpers.Lua.RunMacroText("/RandomMount");
+Thread.Sleep(3000);
+}
+
+//去指定地点使用物品
+
+if (!ObjectManager.Me.InCombat) 
+{
+while (!Quest.IsObjectiveComplete(1,992))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(-7217.703f, -2916.829f, 6.401534f));
+ItemsManager.UseItem(8584);
+System.Threading.Thread.Sleep(4000);
+}
+}
+
+
+if (!Ques?t.IsObjectiveComplete(1,9366))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(-903.2792f, 1967.147f, 68.79318f));
+ItemsManager.UseItem(31347);
+System.Threading.Thread.Sleep(4000);
+}
+
+//任务的第几选项完成
+return Quest.IsObjectiveComplete(1,9192);
+
+Quest.IsObjecti?veComplete(1, 37853)
+
+Quest.IsObjectiveNotComplete(0, 245?)
+
+// Go to Position - Run to position - Run to spot
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(-304.4424f, 2389.106f, 46.37655f));
+
+
+
+
+// Interact with NPC (RuNCode)
+
+// NORMAL - Interact with NPC  与NPC对话
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(-1831.95f, 5298.3f, -12.42768f), 18940);
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(-2917.88f, 4021.48f, 0.4276921f), 19296, 1, false);
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(3373.69f, 994.351f, 5.278372f), 11901, 2, false);	
+
+// Interact with OBJECT in Game
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(new Vector3(2552.44, 856.9836, 51.49502), 148917); 
+
+// Interact With Game Object V2
+
+wManager.Wow.Helpers.Interact.InteractGameObject(wManager.Wow.ObjectManager.Obje?ctManager.GetNearestWoWGameObject
+(wManager.Wow.ObjectManager.ObjectManager.GetWoWGameObjectByEntry(254241)).GetBaseAddress);
+
+
+// Interact with DEAD NPC (runcode)
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(-2917.88f, 4021.48f, 0.4276921f), 19296, 1);
+
+
+
+// ]Distance - Distance from xdistance - 
+ObjectManager.Me.Position.DistanceTo2D(new Vector3(1680.11f, -5824.42f, 161.518f, "186452") ) < 10
+ObjectManager.Me.Position.DistanceTo2D(new Vector3(199.061f, 4238.42f, 121.7268f)) < 125
+
+
+对指定怪物使用物品
+Thread t = new Thread(() =>
+{
+ uint itemId = 23485;
+ int questId = 9397;
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(-1115.424f, 4184.945f, 17.89458f));
+
+ while (robotManager.Products.Products.IsStarted)
+ {
+  if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+  {
+   if (!Quest.HasQuest(questId))
+    break;
+   if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive && ObjectManager.Target.Name =="怪物名称" && ObjectManager.Target.HealthPercent <= 100 )
+   {
+    ItemsManager.UseItem(itemId);
+   }
+  }
+  Thread.Sleep(500);
+ }
+});
+t.Start();
+
+// ObjectManager.Target.HealthPercent <= 25
+
+
+
+//对尸体使用物品
+var position = new Vector3(-1078.63f, 8983.06f, 102.114f);
+int npcEntryId = 182487;
+uint itemId = 25604;
+
+{
+    if (!Quest.IsObjectiveComplete(1, 9948))
+ { 
+       wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(position, npcEntryId);
+    wManager.Wow.Helpers.ItemsManager.UseItem(25604);
+       wManager.Wow.Helpers.Usefuls.WaitIsCasting();
+ }
+}
+
+
+var position = new Vector3(-1078.63f, 8983.06f, 102.114f);
+int npcEntryId = 182487;
+uint itemId = 25604;
+
+{
+    if (!Quest.IsObjectiveComplete(1, 9948))
+ { 
+       wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(position, npcEntryId);
+    wManager.Wow.Helpers.ItemsManager.UseItem(25604);
+       wManager.Wow.Helpers.Usefuls.WaitIsCasting();
+ }
+}
+
+
+//对着物体使用物品
+
+
+
+if (!ObjectManager.Me.InCombat) 
+{
+var position = new Vector3(-756.021, 5925.83, 18.9507);
+int ObjectnpcEntryId = 182107;
+uint itemId = 24355;
+
+while (!Quest.IsObjectiveComplete(1,9720))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(position);
+ItemsManager.UseItem(itemId);
+Thread.Sleep(500);
+Interact.InteractGameObject(ObjectManager.GetWoWGameObjectByEntry(ObjectnpcEntryId).First().GetBaseAddress);
+Usefuls.WaitIsCastingAndLooting();
+}
+}
+
+
+//和物体交互  做任务常用
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(new Vector3?(-705.378, 4799.08, 49.0853), 184466)
+
+184466 (-705.378, 4799.08, 49.0853
+
+//和NPC交互
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3?(5813.81, 449.263, 658.752), 150000)
+
+//传送宝珠
+var position = new Vector3(-592.5982f, 4075.901f, 94.18794f);
+int ObjectnpcEntryId = 184501;
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(position);
+if (ObjectManager.Me.IsMounted) {
+MovementManager.StopMove();
+wManager.Wow.Helpers.Lua.RunMacroText("/RandomMount");
+Thread.Sleep(3000);
+}
+Thread.Sleep(500);
+Interact.InteractGameObject(ObjectManager.GetWoWGameObjectByEntry(ObjectnpcEntryId).First().GetBaseAddress);
+Usefuls.WaitIsCastingAndLooting();
+
+//购买物品  RunLuaCode
+local itemName = "劣质箭"
+local quantity = 5
+for i=1,GetMerchantNumItems() do
+ local n=GetMerchantItemInfo(i) print(n)
+  if n then
+   if n == itemName  then 
+    BuyMerchantItem(i, quantity)
+  end
+ end
+end
+
+CloseMerchant() 
+ClearTarget()
+
+//关闭商人
+CloseMerchant() 
+ClearTarget() 
+
+
+//删除灰色物品宏
+/run v=v==nil and 1 or nil f=f or CreateFrame'Frame' function fu() for j=1,114 do l=GetContainerItemLink(j/23,j%23) if l and (select(3,GetItemInfo(l)))==0 then PickupContainerItem(j/23,j%23) DeleteCursorItem() end end end f:SetScript("OnUpdate",v and fu)
+
+
+//  对着尸体使用物品
+
+wManager.Events.InteractEvents.OnInteractPulse += (target, cancelable) =>
+{
+    var t = wManager.Wow.ObjectManager.ObjectManager.GetObjectByGuid(target);
+    if (!t.IsValid)
+        return;
+    var e = t.Entry;
+    if (e == 21859 || e == 21846)
+    {
+        System.Threading.Tasks.Task.Run(delegate {
+            System.Threading.Thread.Sleep(wManager.Wow.Helpers.Usefuls.Latency + 100);
+            wManager.Wow.Helpers.ClickOnTerrain.Item(31769, t.Position);
+        });
+    }
+};
+
+_____________________________________________________________________________________________________________________________________
+
+
+// RunCode - Interact with ObjectID - Gather Object RunCode FNV   与物品对话并采集
+
+var pos = new Vector3(199.9151f, 3472.976f, 63.24443f);
+int objectId = 184115 ;
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(pos, objectId);
+
+Thread.Sleep(Usefuls.Latency + 10000);
+
+if(ItemsManager.GetItemCountById(23339) < 1)
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(pos, objectId);
+
+Thread.Sleep(Usefuls.Latency + 10000);
+}
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+// Interact with game object RunCode (Not by me) - https://wrobot.eu/forums/topic/11371-game-object/?tab=comments#comment-54611
+
+var Object = ObjectManager.GetNearestWoWGameObject(ObjectManager.GetWoWGameObjectByEntry(1234));
+
+// or var Object = ObjectManager.GetObjectWoWGameObject().Where(o => o.IsValid && o.Entry == 1234).OrderBy(o => o.GetDistance).FirstOrDefault();
+
+if (GoToTask.ToPosition(new Vector3(1, 2, 3, "None"))) // replace "flying" with "None" to ground move
+{
+	if (Object != null)
+	{
+		Interact.InteractGameObject(Object.GetBaseAddress);
+		Usefuls.WaitIsCasting();
+	}
+}
+
+_____________________________________________________________________________________________________________________________________
+
+    //  Droidz Code from "Code Snipets - Use Item on Hostile or Weakend Mob" 
+	//  Add step type "PickUp" (put quest name in parameter)
+    //  Add step type "RunCod?e", in parameter put this code:
+　　/ / Droidz代码从“代码Snipets——使用项敌意或Weakend暴民”
+　　/ /添加步骤类型“皮卡”(参数把追求的名字)
+　　/ /添加步骤类型”RunCod?e”,在参数把这段代码:
+
+    Thread t = new Thread(() =>
+    {
+    	uint itemId = 62899;
+    	int questId = 28000;
+    	while (robotManager.Products.Products.IsStarted)
+    	{
+    		if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+    		{
+    			if (!Quest.HasQuest(questId))
+    				break;
+    			if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive && ObjectManager.Target.HealthPercent <= 25)
+    			{
+    				ItemsManager.UseItem(itemId);
+    			}
+    		}
+    		Thread.Sleep(500);
+    	}
+    });
+    t.Start();
+
+    //(you need to have quest in your questlog, you can replace "62899" but the item id, "28000" by the quest id and "25" by the max target health)
+
+    //Add step type "Pulse" (put quest name in parameter) (use quest type kill or interact)
+
+    //Add step type "TurnIn" (put quest name in parameter)
+	
+_____________________________________________________________________________________________________________________________________	
+	
+// Use item on Hostile or Weakend Mob -- VERSIOn 2.0 (Channeling Version)
+
+// Use item on Weakend Mob - Have quest + item ID) (Use Kill and Loot, or Interact with NPC..) - Channeling Version - if you need to channel the Item on the
+// mob This is a crazy fucking code but it worked great.
+
+// RunCode - Andoido.
+	
+	
+	Thread t = new Thread(() =>
+    {
+    	uint itemId = 6436;
+    	int questId = 1435;
+    	while (robotManager.Products.Products.IsStarted)
+    	{
+    		if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+    		{
+    			if (!Quest.HasQuest(questId))
+    				break;
+    			if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive && ObjectManager.Target.HealthPercent <= 35 )
+    			{
+                                   Fight.StopFight();
+                                   System.Threading.Thread.Sleep(100);
+    				               ItemsManager.UseItem(itemId);
+                                   Usefuls.WaitIsCasting();
+    			}
+    			if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive && ObjectManager.Target.HealthPercent <= 35 )
+    			{
+    				               ItemsManager.UseItem(itemId);
+                                   Usefuls.WaitIsCastingAndLooting();
+                                   ItemsManager.UseItem(itemId);
+    			}
+    			if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive && ObjectManager.Target.HealthPercent <= 35 )
+    			{
+    				                ItemsManager.UseItem(itemId);
+                                    Usefuls.WaitIsCastingAndLooting();
+                                    ItemsManager.UseItem(itemId);
+                                    ItemsManager.UseItem(itemId);
+    			}
+    		}
+    		Thread.Sleep(200);
+    	}
+    });
+    t.Start();
+	
+	
+	
+	
+	
+_____________________________________________________________________________________________________________________________________
+
+	
+	// has quest, and has item go gather, harvest, useitem
+	
+	    Thread t = new Thread(() =>
+    {
+    	uint itemId = 62899;
+    	int questId = 28000;
+    	while (robotManager.Products.Products.IsStarted)
+    	{
+    		if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+    		{
+    			if (!Quest.HasQuest(questId))
+    				break;
+    			if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive && ObjectManager.Target.HealthPercent <= 25)
+    			{
+    				ItemsManager.UseItem(itemId);
+					wManager.wManagerSetting.CurrentSetting.ListHarvest.Add(183933);			
+    			}
+    		}
+    		Thread.Sleep(500);
+    	}
+    });
+    t.Start();
+	
+_____________________________________________________________________________________________________________________________________
+
+	
+// Has Quest go Harvest	
+	
+	Thread t = new Thread(() =>
+    {
+    	int questId = 28000;
+    	while (robotManager.Products.Products.IsStarted)
+    	{
+    		if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+    		{
+    			if (!Quest.HasQuest(questId))
+    				break;
+    			if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive && ObjectManager.Target.HealthPercent <= 25)
+    			{
+					wManager.wManagerSetting.CurrentSetting.ListHarvest.Add(183933);			
+    			}
+    		}
+    		Thread.Sleep(500);
+    	}
+    });
+    t.Start();
+	
+_____________________________________________________________________________________________________________________________________
+
+
+// BOP Pickup BOP Items non loop, loot bop, no loop - RunCode - me
+
+Thread t = new Thread(() =>
+{
+    uint itemId = 16305;
+    int questId = 2;
+    while (robotManager.Products.Products.IsStarted && ItemsManager.GetItemCountById(16305) == 0)
+    {
+        if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+        {
+            if (ObjectManager.Target.IsValid && ObjectManager.Target.IsDead && ObjectManager.Target.Name =="怪物名称")
+            {
+                Lua.LuaDoString("StaticPopup1Button1:Click();");
+            }
+        }
+        Thread.Sleep(100);
+    }
+});
+t.Start();
+
+
+// Part 2 - 2ndary Version - BOP Pickup Items -itemId + questID - Doesnt Have Quest and Item ID == 0 - RuNCode - ME
+
+    Thread t = new Thread(() =>
+    {
+        uint itemId = 16305;
+        int questId = 2;
+        while (robotManager.Products.Products.IsStarted && (itemId == 0) && !Quest.HasQuest(questId))
+        {
+            if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+            {
+                    if (ObjectManager.Target.IsValid && ObjectManager.Target.IsDead)
+                    {
+                        Lua.LuaDoString("StaticPopup1Button1:Click();");
+                    }
+            }
+            Thread.Sleep(100);
+        }
+    });
+t.Start();
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+// Auto Delete items from inventory as you farm (requires delete Custom Script in this post..) - Add any item! Every 10 Seconds, it will Auto Delete - When farming, delte thoes pesky, non
+// valuable items that piss you off. Best combined with opening Clams (delete the zesty meat!)
+
+// Auto use Scrolls once looted - RunCode 
+// Mass throw away, mass delete
+
+Thread t = new Thread(() =>
+    {
+        uint itemId = 7974;
+        while (robotManager.Products.Products.IsStarted && (itemId >= 0))
+        {
+            if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+            {
+                    if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive)
+                    {
+                        throwAway.DeleteItems("Zesty Clam Meat", 0);
+                        throwAway.DeleteItems("Zesty", 0);
+						throwAway.DeleteItems("Raw Spinefin Halibut", 0);
+						throwAway.DeleteItems("Halibut", 0)
+						throwAway.DeleteItems("Halibut", 0);
+						throwAway.DeleteItems("Morning Glory Dew", 0);
+                    }
+            }
+            Thread.Sleep(10000);
+        }
+    });
+t.Start();
+
+
+// Mass Delete Version 2 - Multiple Items, Mass throw away - RunCode - Andoido
+
+Thread t = new Thread(() =>
+    {
+        uint itemId = 7974;
+		uint itemId1 = 4602;
+		uint itemId2 = 3927;
+		uint itemId3 = 4601;
+		uint itemId4 = 4599;
+		uint itemId5 = 4608;
+		uint itemId6 = 1645;
+		uint itemId7 = 8167;
+        while (robotManager.Products.Products.IsStarted && Quest.HasQuest(2980) && (itemId >= 0 || itemId2 >= 0 || itemId3 >= 0 || itemId4 >= 0 || itemId5 >= 0 || itemId6 >= 0 || itemId7 >= 0))
+        {
+            if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+            {
+                    if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive)
+                    {
+                        throwAway.DeleteItems("Zesty Clam Meat", 0);
+                        throwAway.DeleteItems("Zesty", 0);
+						throwAway.DeleteItems("Raw Spinefin Halibut", 0);
+						throwAway.DeleteItems("Halibut", 0);
+						throwAway.DeleteItems("Moon Harvest Pumpkin", 0);
+						throwAway.DeleteItems("Morning Glory Dew", 0);
+						throwAway.DeleteItems("Fine Aged Cheddar", 0);
+						throwAway.DeleteItems("Soft Banana Bread", 0);
+						throwAway.DeleteItems("Cured Ham Steak", 0);
+						throwAway.DeleteItems("Raw Black Truffle", 0);
+						throwAway.DeleteItems("Moonberry Juice", 0);
+						throwAway.DeleteItems("Turtle Scale", 0);
+                    }
+            }
+            Thread.Sleep(10000);
+        }
+    });
+t.Start();
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+// Use item thread (Continuous) - Use Scrolls - Set a timmmer (60 minutes, and it will cast an elixir, etc etc.) make an IF statment, then RUNCODE, then pulse your grind, then ENDIF - RUNCODE - Andoido
+
+
+Thread t = new Thread(() =>
+    {
+        uint itemId = 4425;
+		uint itemId2 = 4419;
+		uint itemId3 = 4421;
+		uint itemId4 = 4424;
+		uint itemId5 = 4422;
+		uint itemId6 = 4426;
+        while (robotManager.Products.Products.IsStarted && (itemId >= 0 || itemId2 >= 0 || itemId3 >= 0 || itemId4 >= 0 || itemId5 >= 0))
+        {
+            if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+            {
+                    if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive)
+                    {
+						ItemsManager.UseItem(itemId);
+						ItemsManager.UseItem(itemId2);
+						ItemsManager.UseItem(itemId3);
+						ItemsManager.UseItem(itemId4);
+						ItemsManager.UseItem(itemId5);
+                    }
+            }
+            Thread.Sleep(5000);
+        }
+    });
+t.Start();
+_____________________________________________________________________________________________________________________________________
+
+	
+	
+	
+// Go to specific location, and Useitem on Object and Harvest + Quest required (RunCode) - me
+
+var pos = new Vector3(-2496.714f, -1632.943f, 91.73521f);
+uint itemId = 15710;
+int objectId = 177644;
+int questId = 6002;
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(pos, objectId);
+
+Thread.Sleep(Usefuls.Latency + 10000);
+
+if (Quest.HasQuest(questId))
+{
+     ItemsManager.UseItem(itemId);
+	wManager.wManagerSetting.CurrentSetting.ListHarvest.Add(177644);
+}	
+
+
+
+
+var pos = new Vector3(-2496.714f, -1632.943f, 91.73521f);
+uint itemId = 15710;
+int objectId = 177644;
+int questId = 6002;
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(pos, objectId);
+
+Thread.Sleep(Usefuls.Latency + 5000);
+
+if (Quest.HasQuest(questId))
+{
+     ItemsManager.UseItem(itemId);
+}
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+// RunCode - If has item, use item - Helboar Quest TBC
+
+        int questId = 9361;
+        if (wManager.Wow.Helpers.Quest.HasQuest(questId))
+        {
+            wManager.Events.LootingEvents.OnLootSuccessful += unit =>
+            {
+                if (wManager.Wow.Helpers.Quest.HasQuest(questId))
+                {
+                    if (wManager.Wow.Helpers.Conditions.InGameAndConnectedAndAliveAndProductStarted &&
+                        !wManager.Wow.Helpers.Conditions.IsAttackedAndCannotIgnore)
+                    {
+                        if (wManager.Wow.Helpers.ItemsManager.GetItemCountById(23248) > 0) // Purified Helboar Meat
+                        {
+                            wManager.Wow.Helpers.ItemsManager.UseItem(23268); // Purification Mixture
+                            wManager.Wow.Helpers.Usefuls.WaitIsCasting();
+                        }
+                    }
+                }
+            };
+        }
+
+
+_____________________________________________________________________________________________________________________________________
+
+// 到指定坐标的NPC使用物品 - Runcode - Andoido
+
+
+var position = new Vector3(-3691.57f, 5220.81f, -21.22668f);
+int npcEntryId = 21859;
+uint itemId = 31769;
+
+{
+    if (!Quest.IsObjectiveComplete(1, 10913))
+	{	
+       wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(position, npcEntryId);
+	   wManager.Wow.Helpers.ItemsManager.UseItem(31769);
+       wManager.Wow.Helpers.Usefuls.WaitIsCasting();
+	}
+}
+
+_____________________________________________________________________________________________________________________________________
+
+
+// Go to Location, Target NPC , Turn Quest In. RunCode --- Manually Complete Quest - force complete, forcecomplete, Runcode
+
+if (Quest.GetQuestCompleted(3561))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(3777.06f, -4619.17f, 227.3226f));
+}
+var u = ObjectManager.GetNearestWoWUnit(ObjectManager.GetWoWUnitByEntry(8399));
+if (u.IsValid)
+{
+    Interact.InteractGameObject(u.GetBaseAddress);
+Lua.LuaDoString("QuestFrameCompleteQuestButton:Click();");
+}
+
+
+	
+_____________________________________________________________________________________________________________________________________
+
+// Cast spell on target 
+	
+	
+            Thread t = new Thread(() =>
+            {
+                uint itemId = 62899;
+                uint spellId = 62899;
+                int questId = 28000;
+                while (robotManager.Products.Products.IsStarted)
+                {
+                    if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+                    {
+                        if (!Quest.HasQuest(questId))
+                            break;
+                        if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive)
+                        {
+                            if (itemId > 0)
+                                ItemsManager.UseItem(itemId); // if it is item
+                            if (spellId > 0)
+                                SpellManager.CastSpellByIdLUA(spellId); // if it is spell
+                            ClickOnTerrain.Pulse(new Vector3(ObjectManager.Target.Position)); // for AOE spell/item
+                        }
+                    }
+                    Thread.Sleep(500);
+                }
+            });
+            t.Start();	
+	
+_____________________________________________________________________________________________________________________________________
+
+
+// Stop fight at specific perceent, StopFight - make "Interact with npc" Quest Profile, and run this code before it!
+/以特定百分比停止战斗，StopFight -制作“与 npc 交互”任务配置文件，并在它之前运行此代码！	
+	
+Thread t = new Thread(() =>
+{
+ int questId = 9889;
+ while (robotManager.Products.Products.IsStarted)
+ {
+  if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+  {
+   if (!Quest.HasQuest(questId))
+    break;
+   if (ObjectManager.Target.IsAlive && ObjectManager.Target.HealthPercent <= 30)
+   {
+    wManager.Wow.Helpers.Fight.StopFight();
+   }
+  }
+  Thread.Sleep(500);
+ }
+});
+t.Start(); 	
+	
+	
+_____________________________________________________________________________________________________________________________________
+
+
+// UseItem - DOESNT have Quest, and DOESNT have Buff - Use item if we dont have buff (RunCode) - before you "pulse"
+	
+	
+	Thread t = new Thread(() =>
+{
+	uint itemId = 62899;
+	int questId = 93351;
+	uint buffId = 135855;
+	while (robotManager.Products.Products.IsStarted)
+	{
+		if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+		{
+			if (!Quest.HasQuest(questId))
+				break;
+			if (!ObjectManager.Me.HaveBuff(buffId))
+			{
+				ItemsManager.UseItem(itemId);
+			}
+		}
+		Thread.Sleep(500);
+	}
+});
+t.Start();
+	
+
+_____________________________________________________________________________________________________________________________________
+
+
+// Check objective, go to location. If Objective NOT complete go to goto location
+
+
+if (!Quest.IsObjectiveComplete(2, 9999))
+  {
+   wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(9999.262f, -9999.587f, 999.8167f));
+  }
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+	
+// Click BOP Item - BOP Continuous Loop - RuNCode	
+
+Thread t = new Thread(() =>
+{
+    uint itemId = 9618;
+    int questId = 25336;
+    while (robotManager.Products.Products.IsStarted)
+    {
+        if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+        {
+            if (ObjectManager.Target.IsValid && ObjectManager.Target.IsDead)
+            {
+                Lua.LuaDoString("StaticPopup1Button1:Click();");
+            }
+        }
+        Thread.Sleep(100);
+    }
+});
+t.Start();
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+// Force character to MOVE strafe if you get a debuff or buff - runcode
+
+ wManager.Events.FightEvents.OnFightLoop += (unit, cancelable) =>
+        {
+            var me = wManager.?Wow.ObjectManager.ObjectManager.Me;
+            var target = wManager.Wow.ObjectManager.ObjectManager.Target;
+            if (me.IsAlive && target.IsAlive && !me.IsCast && me.HaveBuff("Buff name"))
+            {
+                wManager.Wow.Helpers.Keybindings.PressKeybindings(wManager.Wow.Enums.Keybindings.STRAFELEFT, 1000 * 3); // strage left during 3 secondes
+            }
+        };
+
+// You can force the bot to move to a new position , by replacing presskey
+
+wManager.Wow.Helpers.MovementManager.MoveTo(1, 2, 3);
+
+_____________________________________________________________________________________________________________________________________
+
+
+// use as overridepulse with complete condition.
+
+// Force check iscomplete for quests.
+// Force turn in, force turnin , force pickup, force accept queest, acceptquest.
+　　/ /强制赋予iscomplete检查任务。
+　　刚才在/ /力量,力量回绝,力传感器,强迫接受什么,acceptquest。
+//强制检查任务是否完成。//强制上交，强制上交，强制拾取，强制接受请求，接受请求。
+
+
+if (!Quest.HasQuest(Quest ID) && !(Ob?jectManager.Me.Position.DistanceTo2D(new Vector3(x, y, z)) < 20))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(x, y, z));
+wManager.Wow.Helpers.Interact.InteractGameObject(ObjectManager.GetWoWGameObjectByEntry(Object ID).FirstOrDefault().GetBaseAddress);
+Thread.sleep(100);
+wManager.Wow.Helpers.Lua.RunMacroText("/script AcceptQuest();");
+}
+return;
+
+// complete condition : 
+return (Quest.HasQuest(Quest ID) && !Quest.GetQuestCompleted(Quest ID));
+
+// turn in code
+wManager.Wow.Helpers.Lua.RunMacroText("/click QuestFrameCompleteQuestButton");
+
+
+_____________________________________________________________________________________________________________________________________
+
+// Force pickup of quest - Runcode
+强行接受任务
+
+int npcEntryId = 4961;
+var position = new Vector3(-8681.93f, 432.901f, 99.0906f);
+
+if(!Quest.HasQuest(1247) && !Quest.GetQuestCompleted(1247))
+{
+
+while(!Quest.HasQuest(1247))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(position, npcEntryId);
+
+Thread.Sleep(Usefuls.Latency * 5);
+
+Lua.LuaDoString("AcceptQuest()");
+
+Thread.Sleep(Usefuls.Latency * 5);
+
+}
+
+}
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+// RunCode - Used to check an items cooldown remaining time - by droidz - https://wrobot.eu/bugtracker/useitemon-doesnt-work-because-of-item-cooldown-r594/
+
+robotManager.Events.FiniteStateMachineEvents.OnRunState += (engine, state, cancelable) =>
+        {?
+            int itemId = 18904;
+            int questI?d = 7003;
+
+            if (!wManager.Wow.Helpers.Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+                return;	
+            if (wManager.Wow.Helpers.Conditions.IsAttackedAndCannotIgnore)
+                return;
+
+            if (state.DisplayName == "Quester")
+            {
+                if (wManager.Wow.Helpers.Quest.HasQuest(questId) &&
+                    wManager.Wow.Helpers.Lua.LuaDoString<bool>("local start, duration, enable = GetItemCooldown("+ itemId + "); return enable;"))
+                {
+                    cancelable.Cancel = true;
+                }
+            }
+        };
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+// How to let this code run once and how to let it move to a position xyz? - by imod
+
+// Position we want to move to
+Vector3 position = new Vector3(1, 1, 1);
+
+// Move to the given position
+MovementManager.Go(PathFinder.FindPath(position), false);
+
+// Wait
+while (MovementManager.InMovement && Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause && ObjectManager.Me.HaveBuff(new Spell("NameOfTheSpell").Ids)
+{
+  // Wait follow path
+  Thread.Sleep(100);
+}
+
+
+// Another example of moving your character to a new position during fight or getting debuff
+
+		wManager.Events.FightEvents.OnFightLoop += (unit, cancelable) =>
+        {
+            var pos = 1;
+            var me = wManager.Wow.ObjectManager.ObjectManager.Me;
+            var target = wManager.Wow.ObjectManager.ObjectManager.Target;
+            if (me.IsAlive && target.IsAlive && pos == 1)
+            {
+			Vector3 position = new Vector3(3073.848f, -3116.693f, 294.0692f);
+
+			// Move to the given position
+			MovementManager.Go(PathFinder.FindPath(position), false);
+
+			// Wait
+			while (MovementManager.InMovement && Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+			{
+			// Wait follow path
+			Thread.Sleep(3000);
+			pos = 0;
+			}
+            }
+        }; 
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+// Keep from Drowning - Swimming, Drowning, JUMP, Breath, - Runcode -- Change "while" statment to whatever the quest demands (objective wise)
+
+
+Thread t = new Thread(() =>
+{
+    while (robotManager.Products.Products.IsStarted && ItemsManager.GetItemCountById(15874) != 10)
+    {
+        if (ObjectManager.Me.BreathTimerLeft < 10000)
+        {
+            if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+            {
+wManager.Wow.Helpers.Keybindings.PressKeybindings(wManager.Wow.Enums.Keybindings.JUMP);?
+wManager.Wow.Helpers.Keybindings.PressKeybindings(wManager.Wow.Enums.Keybindings.JUMP);?
+wManager.Wow.Helpers.Keybindings.PressKeybindings(wManager.Wow.Enums.Keybindings.JUMP);?
+wManager.Wow.Helpers.Keybindings.PressKeybindings(wManager.Wow.Enums.Keybindings.JUMP);?
+wManager.Wow.Helpers.Keybindings.PressKeybindings(wManager.Wow.Enums.Keybindings.JUMP);?
+wManager.Wow.Helpers.Keybindings.PressKeybindings(wManager.Wow.Enums.Keybindings.JUMP);?
+wManager.Wow.Helpers.Keybindings.PressKeybindings(wManager.Wow.Enums.Keybindings.JUMP);?
+wManager.Wow.Helpers.Keybindings.PressKeybindings(wManager.Wow.Enums.Keybindings.JUMP);?
+            }
+			wManager.Wow.Helpers.Fight.StopFight();
+        }
+        Thread.Sleep(10000);
+    }
+});
+t.Start();
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+// Under Water Holding Breath - Swimming - fatigue - make into runcode
+
+if (isneedActionbecausebreath())
+{
+    robotManager.Helpful.Keyboard.PressKey(wManager.Wow.Memory.WowMemory.Memory.WindowHandle," ");
+ }
+
+internal bool isneedActionbecausebreath()
+    {
+        if (ObjectManager.Me.BreathActive)
+        {?
+            Logging.WriteFight("isneedActionbecausebreath: "+ObjectManager.Me.BreathTimerLeft);
+            if (ObjectManager.Me.BreathTimerLeft < 10000)
+            {
+                return true;
+            }
+        }
+        return false;
+    
+                ?
+    } ?
+
+
+// force bot to click Space button
+
+robotManager.Helpful.Keyboard.PressKey(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, System.Windows.Forms.Keys.F1); ?
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+// Swimming code
+
+        wManager.Events.MovementEvents.OnMoveToLoop += () =>
+        {
+            if (wManager.Wow.ObjectManager.ObjectManager.Me.IsSwimming)
+                wManager.wManagerSetting.CurrentSetting.UseCTM = true;
+            else
+                wManager.wManagerSetting.CurrentSetting.UseCTM = false;
+        };
+
+
+
+
+
+// Hunter Tame Pet FNV - OverridePulseCSharpCode
+
+// is complete -- (not required in quest log)
+宠物
+return ObjectManager.Pet.IsValid;
+
+
+var pos = new Vector3(3058.602f, 1772.725f, 143.2499f);
+int npc = 22484;
+
+if(!ObjectManager.Pet.IsValid)
+{
+   wManager.Wow.Bot.Tasks.GoToTask.ToPosition(pos);
+   wManager.wManagerSetting.CurrentSetting.MaxUnitsNear = 100;
+   var target = ObjectManager.GetObjectWoWUnit().FirstOrDefault(o => o.Entry == npc && o.Position.DistanceTo(ObjectManager.Me.Position) < 50 && o.IsAlive);
+
+if(target != null && target.IsAlive)
+{
+   ObjectManager.Me.Target = target.Guid;
+
+if(ObjectManager.Me.Position.DistanceTo(target.Position) >= 30)
+   MovementManager.MoveTo(target.Position);
+
+   Thread.Sleep(Usefuls.Latency + 250);
+   SpellManager.CastSpellByNameLUA("Tame Beast");
+}
+
+if(ObjectManager.Pet.IsValid)
+   return true;
+
+
+}
+else
+{
+   return true;
+}
+
+return false;
+
+
+
+
+
+
+	
+_____________________________________________________________________________________________________________________________________
+	
+	
+	
+// Schakas Use Script On  - TBC Gathering items (New Life Q example)
+	
+ItemsManager.UseItem(22955);
+Thread.Sleep(1000);
+Interact.InteractGameObject(ObjectManager.GetWoWGameObjectByEntry(181433).First().GetBaseAddress);
+Usefuls.WaitIsCastingAndLooting();
+
+
+// Schakas Use Script On - For NPC's (didnt work for me) 
+	
+	ItemsManager.UseItem(22955);
+	Thread.Sleep(1000);
+	Interact.InteractGameObject(ObjectManager.GetWoWUnitByEntry(123, true).First().GetBaseAddress);
+	Usefuls.WaitIsCastingAndLooting();	
+	
+	
+_____________________________________________________________________________________________________________________________________
+
+
+
+// Use inventory Solot Items
+
+UseInventoryItem( 13 ); 
+UseInventoryItem( 14 );
+
+____________________________________________________________________________________________________________________________________
+
+// Set chat text in game
+
+DEFAULT_CHAT_FRAME:AddMessage("|cFFFFCE2ETramBot|r Zangermarsh Elevator - Go TO and wait")
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+// Abandon Remove Quests (RuNCode)
+放弃任务
+QuestHelper.AbandonQuest("Dr. Boom!");
+
+
+_____________________________________________________________________________________________________________________________________
+
+// Has key / Have Key / Key Custom Script - RuNCode
+
+int keyId = 4882;
+
+Logging.Write("Have Key ID (" +  keyId + "): " + Key.haveKey(keyId));
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+// Is Complete Condition for Items xIsCompletex iscomplete - RunCode
+
+return ItemsManager.GetItemCountById(28513) >= 1;
+
+
+//is complete - quest compolete or less than x ft - FNV IsComplete
+
+return (Quest.GetQuestCompleted(187)  || new Vector3(-11327.88f, -204.1989f, 75.34803f).DistanceTo(ObjectManager.Me.Position) < 10);
+
+
+// Is Complete Distance to Object, iscomplete, distance - is complete quester code
+
+return ObjectManager.Me.Position.DistanceTo2D(new Vector3(1822.23f, 1416.56f, -7.84571f)) <8;
+
+
+//  If you want complete quest when you don't have item in bag (1234 is item id):  
+
+return wManager.Wow?.Helpers.ItemsManager.GetItemCountByIdLUA(1234) <= 0;
+
+// Or if you want complete ?quest when you have item in bag (1234 is item id): 
+//           (replace 3 by minimun item count)? 
+
+return wManager.Wow.Helpers.ItemsManager.GetItemCountByIdLUA(1234) >= 3;?
+
+
+// Is Complete Continent Code - iscomplete check continent 
+
+return (wManager.Wow.Helpers.Usefuls.ContinentId == (int)wManager.Wow.Enums.ContinentId.Azeroth);
+
+// Is Complete - iscomplete - Dungeon Check - ContinentID
+
+return (wManager.Wow.Helpers.Usefuls.ContinentId == (int)wManager.Wow.Enums.ContinentId.MonasteryInstances);
+
+// Is Complete - Quest Completed, has quest. 
+
+return (Quest.HasQuest(1234) && !Quest.GetQuestCompleted(1234));
+
+
+
+// Log Writing - Write to the wrobot Log - RunCode
+
+Logging.Write("TEXT HERE");
+
+
+
+// Cast spell by name - Cast Spell ID RunLuaCode
+
+CastSpellByName("Renew","target")
+
+
+
+// Has item More or Less Than RunCode
+
+ItemsManager.GetItemCountById(11188) < 7
+
+
+// Does Bot Know Spell - RunCode
+
+!wManager.Wow.Helpers.SpellManager.KnowSpell(688)
+
+// Class Code - ClassCheck - RunCode
+
+ObjectManager.Me.WowClass == WoWClass.Warlock
+
+(ObjectManager.Me.WowClass == WoWClass.Warlock || ObjectManager.Me.WowClass == WoWClass.Paladin || ObjectManager.Me.WowClass == WoWClass.Warrior || ObjectManager.Me.WowClass == WoWClass.Rogue
+ || ObjectManager.Me.WowClass == WoWClass.Hunter || ObjectManager.Me.WowClass == WoWClass.Druid || ObjectManager.Me.WowClass == WoWClass.Priest)
+
+// If Has Item xhasitemx- RuNCode
+
+ItemsManager.HasItemById(29912)
+
+
+// If Statment - hasitem less than , and objective complete, and has quest, and doesnt have quest complete
+// RunCode
+
+((Quest.HasQuest(2980) 
+&& 
+!Quest.GetQuestCompleted(2980)) 
+&& 
+(!Quest.IsObjecti?veComplete(3, 2980)) 
+&& 
+(ItemsManager.GetItemCountById(9590) < 7))
+
+-- OR --
+
+// Difference bewteen these two, is this checks for a SPECIFIC item if we have or dont have. Where as the one above, checks for a set Number of items.
+// Has Quest, Doesnt Have Quest Completed, Doesnt have Objective for quest completed, Doesnt have ITEM (involved with quest)
+// Reccomended to only use this code for quests that use single items (Kill mob for skull, if it was 10 skulls, use the code above!
+
+// RunCode
+
+((Quest.HasQuest(2980) 
+&& 
+!Quest.GetQuestCompleted(2980)) 
+&& 
+(!Quest.IsObjecti?veComplete(3, 2980)) 
+&& 
+(!ItemsManager.HasItemById(29912))
+
+
+
+// Use Item (RunCode) -- Used to Use Items in Game.
+
+ItemsManager.UseItem(6948);
+
+wManager.Wow.Helpers.ItemsManager.UseItem(123);
+
+// UseScriptOn - C# - UseItem - Use Item Thread Sleep, Use Item Quester Profile, or RuNCode
+
+ItemsManager.UseItem(1234);
+Usefuls.WaitIsCasting();
+Thread.Sleep(1000 * 10);
+	
+
+// Has Buff or Doesnt havebuff
+
+ObjectManager.Me.TargetObject.HaveBuff(22807);
+
+
+// Equip Item By name (runcode)
+wManager.Wow.Helpers.ItemsManager.EquipItemByName("Spectrecles");
+
+
+// Check Player Faction or Race (RunCode)
+
+return (ObjectManager.Me.PlayerRace == PlayerFactions.Tauren);
+
+
+// Check if has item Equiped - weapon Equiped  / /检查是否有装备
+
+EquippedItems.GetEquippedItems().Where(x => x.Entry == 2495 || x.Entry == 2488 || x.Entry == 2492 || x.Entry == 2490 || x.Entry == 2509 || x.Entry == 5441 || x.Entry == 2516).Count() == 0
+
+// Check equiped item's rarity (Add to code above)
+
+x.GetItemInfo.ItemRarity <= 1
+
+
+// Pet is alive and valid - has pet summoned
+
+ObjectManager.Pet.IsAlive && ObjectManager.Pet.IsValid
+
+
+// Check pet by name (RunCode)
+
+if (ObjectManager.Pet.Name == "Wolf")
+	return true;
+else
+	return false;
+
+// Is Complete check pet name - not tested
+
+return ObjectManager.Pet.Name == "Wolf"
+
+
+
+// Check how much Money we have in bags (RunCode) 
+
+ObjectManager.Me.GetMoneyCopper >= 800
+
+
+// Skillline - Is Complete Condition
+
+return wManager.Wow.Helpers.Skill.GetValue(wManager.Wow.Enums.SkillLine.Lockpicking) >= 75;
+
+Skill.GetValue(SkillLIne.Engineering) < 50
+
+
+
+// If Has Quest + If Has Quest Complete RunCode
+
+Quest.HasQuest(10446) && !Quest.GetQuestCompleted(10446)
+
+Quest.HasQuest(10446) && Quest.IsObjecti?veComplete(1, 37853)
+
+
+// CAN CONDITION - Check which continent we are on - Pulse true if we are ON this ContinentId
+
+return Usefuls.ContinentId == (int) ContinentId.Azeroth;
+
+
+// Check map Zone / Continent / Submap / Sub Continent / zone
+/*  */
+Usefuls.ContinentId == (int) ContinentId.Azeroth
+
+Usefuls.ContinentId == (int) ContinentId.Kalimdor
+
+Usefuls.SubMapZoneName.Contains("theran Village")
+
+(wManager.Wow.Helpers.Usefuls.MapZoneName == "" || wManager.Wow.Helpers.Usefuls.MapZoneName == "")
+	
+	
+// Check player race and faction alliance and horde - runcode
+
+ObjectManager.Me.IsAlliance
+
+ObjectManager.Me.IsHorde
+
+
+// Stop the bot from Moving - StopMoving - RuNCode
+
+if(ObjectManager.Me.GetMove)
+                MovementManager.StopMoveTo(true, 500);
+
+
+// Check number of enemies attacking you or attacking pet
+
+ObjectManager.GetWoWUnit?Attackables().Where(x => x.Target == ObjectManager.Me.GetBaseAddress || x.Target == ObjectManager.Pet.GetBaseAddress).Count() >= 2?
+
+// use spell cast spell on target - Cast spell by id - cast spell by lua RunCode
+
+ Hello,you can use lua code: 
+
+CastSpellByID(1234)
+CastSpellByID(1234, 'target')?
+
+
+
+or c# code:
+
+wManager.Wow.Helpers.SpellManager.CastSpellByIdLUA(1234);
+wManager.Wow.Helpers.SpellManager.CastSpellByIdLUA(1234, "target");
+
+
+
+// Target nearest enemy and use spell / use spell on nearest target RunLuaCode
+
+local Sunfire = GetSpellInfo(93402);
+if (not Sunfire) then return; end
+TargetNearestEnemy();
+CastSpellByName(Sunfire);
+
+
+
+// cast spell 
+
+local spellid=123456  --[[change to the ID-nr of the spell)]]
+local spellname=GetSpellInfo(spellid)
+                if (IsUsableSpell(spellname)) then
+                    local start, duration, enable = GetSpellCooldown(spellname)
+                    if (duration==0) then
+                        CastSpellByName(spellname);
+                        spell=spellname;
+                        break;
+                    end
+                end
+
+
+
+// Target Reactions - Friendly Neutral honored. Checkes the Reaction of the Target in an IF statment.
+
+wManager.Wow.ObjectManager.ObjectManager.Target.Reaction < wManager.Wow.Enums.Reaction.Friendly
+
+// or
+
+wManager.Wow.ObjectManager.ObjectManager.Me.TargetObject.Reaction > Reaction.Neutral
+
+// Reactions IsComplete Statment
+
+return wManager.Wow.ObjectManager.ObjectManager.Me.TargetObject.Reaction > Reaction.Friendly;
+
+// Reactions ORDER
+        Hated,
+        Hostile,
+        Unfriendly,
+        Neutral,
+        Friendly,
+        Honored,
+        Revered,
+        Exalted,
+
+_____________________________________________________________________________________________________________________________________
+
+// Force bot to Sit, Force bot to Stand, runcode - Matenia
+
+Lua.LuaDoString("SitOrStand()");
+
+//newer wow versions
+Lua.LuaDoString("SitStandOrDescendStart()");
+
+//alternative approach
+Lua.LuaDoString("DoEmote('SIT')");?
+
+//if you wanna stand up specifically
+Lua.LuaDoString("DoEmote('STAND')");
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+// Go to specific targets GUID - Spell on Target
+
+var unit = new WoWUnit(ObjectManager.GetObjectByGuid (17379391364021616671).GetBaseAddress);
+
+Fight.StopFight();
+ObjectManager.Me.Target = unit.Guid;  
+Fight.StopFight();
+
+// or
+
+var unit = new WoWUnit(ObjectManager.GetObjectByGuid (17379391364021616671).GetBaseAddress);
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(unit.Position);
+
+_____________________________________________________________________________________________________________________________________
+
+
+// 对地面使用物品
+
+if (wManager.Wow.Helpers.ItemsManager.HasItemById(ID))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(z, y, z));
+System.Threading.Thread.Sleep(6000);
+ItemsManager.UseItem(ItemID);
+ClickOnTerrain.Pulse(new Vector3(x, y, z));
+System.Threading.Thread.Sleep(1000);
+}
+return true;
+
+
+_____________________________________________________________________________________________________________________________________
+
+// Hunter Pet Auto Train - Auto tame hunter pet runcode
+
+if(ObjectManager.Pet.IsValid)
+{
+Lua.LuaDoString("CastSpellByName('Beast Training')");
+Thread.Sleep(Usefuls.Latency + 500);
+Lua.LuaDoString("BuyTrainerService(0)");
+Thread.Sleep(Usefuls.Latency + 500);
+Lua.LuaDoString("TogglePetAutocast(4)");
+Thread.Sleep(Usefuls.Latency + 500);
+Lua.LuaDoString("TogglePetAutocast(5)");
+Thread.Sleep(Usefuls.Latency + 500);
+}
+_____________________________________________________________________________________________________________________________________
+
+
+// is complete - Quest Complete condition, Quest log - bettersister
+
+// Check if quest is completed
+
+Quest.GetQuestCompleted(123456)
+
+Quest.GetLogQuestIsComplete(245)
+
+if you're using it as Is Complete condition put it like this:
+
+return Quest.GetLogQuestIsComplete(245);
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+// Search and Loot Chests - Find Chests - IMOD - RunCode
+
+//You should not using the index because if there is no chest you will get a out of range exception.
+
+// Search for a chest
+List<WoWGameObject> chest = ObjectManager.GetWoWGameObjectByyId(123456).FirstOrDefault();
+
+// Found?
+if(chest != null)
+{
+  // Open
+  Interact.InteractGameObject(chest.GetBaseAddress);
+}
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+// Click  Quest Complete Button - Droidz 
+按任务完成按钮
+
+//In "Quest order editor" add action "RunCode" after "pulse" with param:
+
+wManager.Wow.Helpers.Quest.C?ompleteQuest();
+
+You can add wait time to wait then window appear:
+
+Thread.Sleep(3500);
+wManager.Wow.Helpers.Quest.CompleteQuest();
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+// Interact with game object and gather
+
+WoWObject _t = ObjectManager.GetWoWGameObjectByName("put here name of herb").OrderBy(o => o.GetDistance).FirstOrDefault();
+Interact.InteractGameObject(_t.GetBaseAddress, true, false);
+Usefuls.WaitIsCasting();
+Usefuls.WaitIsLooting();
+
+
+// Part 2 - For gathering / mining with bad latency.
+
+WoWObject _t = ObjectManager.GetWoWGameObjectByName("Peacebloom").OrderBy(o => o.GetDistance).FirstOrDefault();
+Interact.InteractGameObject(_t.GetBaseAddress, true, false);
+Usefuls.WaitIsCasting();
+Usefuls.WaitIsLooting();
+// wManager.DevelopmentTools.OutPutCSharp= 
+// Execute time: 703
+
+
+// Part 3
+
+WoWObject _t = ObjectManager.GetWoWGameObjectByName("Peacebloom").OrderBy(o => o.GetDistance).FirstOrDefault();
+Interact.InteractGameObject(_t.GetBaseAddress, true, false);
+// this code works like Usefuls.WaitIsCasting();?
+robotManager.Helpful.Timer timer = new robotManager.Helpful.Timer((double)(Usefuls.Latency + 200));
+while (!timer.IsReady && !ObjectManager.Me.IsCast) {
+	Thread.Sleep(5);
+}
+Logging.Write("Me.IsCast="+ObjectMana?ger.Me.IsCast);
+while (ObjectManager.Me.IsCast) {
+	Thread.Sleep(30);
+}
+Usefuls.WaitIsLooting();
+Move.JumpOrAscend();
+// wManager.DevelopmentTools.OutPutCSharp= 
+// Execute time: 1438
+
+
+_____________________________________________________________________________________________________________________________________
+
+// Go to Position - Run to position - Run to spot
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(-304.4424f, 2389.106f, 46.37655f));
+
+
+
+
+// Interact with NPC (RuNCode)
+
+// NORMAL - Interact with NPC  与NPC对话
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(-1831.95f, 5298.3f, -12.42768f), 18940);
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(-2917.88f, 4021.48f, 0.4276921f), 19296, 1, false);
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(3373.69f, 994.351f, 5.278372f), 11901, 2, false);	
+
+// Interact with OBJECT in Game
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(new Vector3(2552.44, 856.9836, 51.49502), 148917); 
+
+// Interact With Game Object V2
+
+wManager.Wow.Helpers.Interact.InteractGameObject(wManager.Wow.ObjectManager.Obje?ctManager.GetNearestWoWGameObject
+(wManager.Wow.ObjectManager.ObjectManager.GetWoWGameObjectByEntry(254241)).GetBaseAddress);
+
+
+// Interact with DEAD NPC (runcode)
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(-2917.88f, 4021.48f, 0.4276921f), 19296, 1);
+
+
+
+// ]Distance - Distance from xdistance - 
+
+ObjectManager.Me.Position.DistanceTo2D(new Vector3(199.061f, 4238.42f, 121.7268f)) < 125
+
+__________________________________________________________________________________________________________________________________
+
+
+// level 5 priest quest - cast spell on target - run code
+
+if (Quest.HasQuest(5648))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(170.596f, -4769.92f, 14.40446f), 12430);
+wManager.Wow.Helpers.Lua.RunMacroText("/cast Lesser Heal");
+Usefuls.WaitIsCastingAndLooting();
+wManager.Wow.Helpers.Lua.RunMacroText("/cast Power Word: Fortitude");
+Usefuls.WaitIsCastingAndLooting();
+}
+return true;
+
+__________________________________________________________________________________________________________________________________
+
+
+
+// Interact with Game Object V3  (use quest profile and overidepulse... quest type) ??https://wrobot.eu/forums/topic/9846-spam-click-specific-object/
+
+			while (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause && !Conditions.IsAttackedAndCannotIgnore)
+			{
+				var o = wManager.Wow.ObjectManager.ObjectManager.GetNearestWoWGameObject(wManager.Wow.ObjectManager.ObjectManager.GetWoWGameObjectByEntry(218889));
+				if (!o.IsValid)
+					break;
+				wManager.Wow.Helpers.Interact.InteractGameObject(o.GetBaseAddress);
+				Thread.Sleep(100);
+			}
+
+
+// Interact with NPC - Talk to NPC (RunCode) - use with GONG / Andoido (One after another) - by Nudl
+
+
+            WoWUnit toTalk =
+                wManager.Wow.ObjectManager.ObjectManager.GetObjectWoWUnit()
+                    .SingleOrDefault(i => i.Entry == 75746);
+            if (toTalk != null)
+            {
+                wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(toTalk.Position, toTalk.Entry, 1);
+            }
+
+
+
+// Interact with Game Object (RunCode)  https://wrobot.eu/forums/topic/8395-clicking-objects-in-dungeons/
+
+            WoWGameObject gong = wManager.Wow.ObjectManager.ObjectManager.GetObjectWoWGameObject().FirstOrDefault(i => i.Entry == 148917);
+            if (gong != null)
+            {
+                wManager.Wow.Helpers.Interact.InteractGameObject(gong.GetBaseAddress);
+            } ?
+			
+			
+            WoWGameObject andoido = wManager.Wow.ObjectManager.ObjectManager.GetObjectWoWGameObject().FirstOrDefault(i => i.Entry == 148917);
+            if (andoido != null)
+            {
+                wManager.Wow.Helpers.Interact.InteractGameObject(andoido.GetBaseAddress);
+            } 			
+			
+// Interact with Object -- Search for nearest Game Object and Interact
+
+			WoWGameObject gong = ObjectManager.GetNearestWoWGameObject(ObjectManager.GetWoWGameObjectById("1234")).GetBaseAddress
+            if (gong != null)
+            {
+                wManager.Wow.Helpers.Interact.InteractGameObject(gong.GetBaseAddress);
+            }			
+			
+
+
+__________________________________________________________________________________________________________________________________
+
+
+// Harvest Item - Used to "Pickup, Gather, or GET a Quest item, Herb, Ore anything really ( RunCode)
+
+wManager.wManagerSetting.CurrentSetting.ListHarvest.Add();
+
+__________________________________________________________________________________________________________________________________
+
+
+// Move Backward (RunCode)
+
+wManager.Wow.Helpers.Move.Backward(Move.MoveAction.PressKey,2000);
+
+// Move Forward (RunCode)
+
+wManager.Wow.Helpers.Move.Forward(Move.MoveAction.PressKey,2000);
+
+
+
+这是一些使用 c# 编写的代码，涉及到“沿着特定方向移动”的功能。具体来说：
+
+wmanager.wow.helpers.move.backward(move.moveaction.presskey,2000); 移动角色向后方向（默认是人物的背对屏幕），持续 2000 毫秒。它调用了 wmanager 工具库中 wow 类型的 move 类的 backward 方法。
+wmanager.wow.helpers.move.forward(move.moveaction.presskey,2000) 移动角色向前方向（默认是人物面对屏幕），持续 2000 毫秒。它调用了 wmanager 工具库中 wow 类型的 move 类的 forward 方法。
+这些方法需要传递一个 moveaction 参数，指示移动行为，这里是按下按键移动。
+__________________________________________________________________________________________________________________________________
+
+
+// Display Code for my on screen display ( RunLuaCode )
+
+MyFrame.text:SetText("TEXT HERE")
+
+
+
+
+_这段代码是一个lua脚本，用于在用户界面上添加一个文本框，并将指定的文本字符串“text here”显示在文本框中。其中：
+
+myframe 是文本框的名称或引用，它已经被创建并经过设置。
+.text是文本框对象里的文本属性，用于表示文本框中显示的文本。
+:settext("text here") 调用文本框的方法 settext() 并传入参数 "text here" 来设置文本框中显示的文本内容。
+
+
+
+
+_________________________________________________________________________________________________________________________________
+
+
+// Is Complete condition for KILLING a MOB
+// with the id of the boss dont forget to select "true" in "not required in quest log" 
+
+return ObjectManager.GetWoWUnitByEntry(16151).Count == 0;
+
+这是一个用于检查击杀指定怪物是否已完成的代码段。其中16151是boss的唯一标识符或id，它通过objectmanager（可能是一个游戏插件或脚本）获取一个wowunit对象集合。
+
+如果返回的集合数量为0，也就是当前世界（可能是游戏世界）中没有具有该id的怪物，则被认为击杀该怪物的条件已经完成。特别要注意的是，在调用该函数时需要选择 "not required in quest log" 选项并将其设置为 “true”，以确保不考虑它与任务进度的关联性。
+__________________________________________________________________________________________________________________________________
+
+
+// Is Quest Objective Complete (If, While, Runcode)
+
+Quest.IsObjecti?veComplete(1, 37853)
+
+Quest.IsObjectiveNotComplete(0, 245?)
+
+// Replace 1 with the objective number in correct list order
+
+
+这是一个伪代码示例，可能用于编写某个游戏或应用程序中的任务系统。
+
+第一行代码 quest.isobjectivecomplete(1, 37853) 的意思是检查目标列表中编号为1的任务是否已经完成，如果完成，返回true，否则返回false。其中参数 37853 可能是要检查的任务的唯一标识符或其他相关标识符。
+
+第二行代码 quest.isobjectivenotcomplete(0, 245?) 的意思是检查目标列表中编号为0的任务是否没有完成，如果没有完成，返回true，否则返回false。其中，参数 245? 可能也是另一个任务的标识符或其他相关标识符。
+
+请注意，这只是一段伪代码，并不完整或具体。它缺少必要的语法和上下文来解释其用途。
+__________________________________________________________________________________________________________________________________
+
+
+// Change Wrobots Current Settings (RuNCode)
+
+wManager.Wow.Helpers.Conditions.ForceIgnoreIsAttacked = false;
+wManager.Wow.Helpers.Conditions.ForceIgnoreIsAttacked = true;
+
+wManager.wManagerSetting.CurrentSetting.AttackBeforeBeingAttacked = true;
+wManager.wManagerSetting.CurrentSetting.CanAttackUnitsAlreadyInFight = true;
+wManager.wManagerSetting.CurrentSetting.IgnoreCombatWithPet = false;
+
+
+// Force bot to sell vendor - run to town (runcode) Force Sell, Sell Items Force to Town
+
+wManager.Wow.Bot.States.ToTown.ForceToTown = true;
+
+wManager.Wow.Bot.States.ToTown.ForceToTown = true;
+wManager.wManagerSetting.CurrentSetting.Selling = true;
+wManager.wManagerSetting.CurrentSetting.SellGray = true;
+wManager.wManagerSetting.CurrentSetting.ForceSellList.Add("Item name at force to sell");
+
+// Use only profile NPCs
+wManager.Wow.Helpers.NpcDB.AcceptOnlyProfileNpc ?= true;
+
+// Clear blacklist for session
+wManager.wManagerSetting.ClearBlacklistOfCurrentProductSession();
+
+
+
+// Force bot to sell at closest saved npc
+
+            if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWith(Npc npc, bool skipIfCannotMakePath = false, BooleanDelegate conditionExit = null, bool acceptNpcDead = false))
+            {
+                wManager.Wow.Helpers.Vendor.SellItems(List<String> itemSell, List<string> itemNoSell, List<Enums.WoWItemQuality> itemQuality);
+            }
+			
+			
+// Force bot to SELL then go TRAIN
+
+wManager.Wow.Bot.States.ToTown.ForceToTown = true;?  // run code - Forces bot to go sell.
+
+new wManager.Wow.Bot.States.Trainers().NeedToRun  // RunCode - Checks if the bot needs to train or not.
+
+
+// Forces for to Sell AND Train.
+
+robotManager.Events.FiniteStateMachineEvents.OnBeforeCheckIfNeedToRunState += (engine, state, cancelable) =>
+{
+  if (state != null && state.GetType() == typeof(wManager.Wow.Bot.States.Trainers) && state.NeedToRun)
+  {
+    wManager.Wow.Bot.States.ToTown.ForceToTown = true;?
+  }
+};
+			
+			
+			
+// Clears the NPC Database.
+			
+wManager.Wow.Helpers.NpcDB.ListNpc.Clear();			
+
+
+// Check if Resting or Rested Exp
+
+Lua.LuaDoString("return IsResting()"); 
+ 
+Lua.LuaDoString("return GetRestState() == 1")
+
+__________________________________________________________________________________________________________________________________
+
+
+// To unblacklist vendor (add you own condition, check if you are in smart pull): - RunCode
+
+robotManager.Events.LoggingEvents.OnAddLog += delegate(Logging.Log log)
+        {
+            if (!log.Text.Contains("[ToTown] Unable to reach the vendor, blacklist it 120 minutes (you can disable this NPC in NPC DB tab 'Tools')."))
+                return;
+            foreach (var n in NpcDB.ListNpc)
+            {
+                n.BlackList(-1);
+            }
+        };
+
+
+
+__________________________________________________________________________________________________________________________________
+
+
+
+ // To add vendor with C# you can use this code:
+
+            var npcVendor = new wManager.Wow.Class.Npc
+            {
+                ContinentId = (wManager.Wow.Enums.ContinentId)wManager.Wow.Helpers.Usefuls.ContinentId,
+                Entry = 1234,
+                Faction = wManager.Wow.Class.Npc.FactionType.Neutral,
+                Name = "Npc name",
+                Position = new robotManager.Helpful.Vector3(1, 2, 3),
+                CanFlyTo = true,
+                Type = wManager.Wow.Class.Npc.NpcType.Repair, // wManager.Wow.Class.Npc.NpcType.Vendor
+            };
+            wManager.Wow.Helpers.NpcDB.AddNpc(npcVendor, false);
+
+__________________________________________________________________________________________________________________________________
+
+
+
+ //(use step "RunCode" to run all code) - By Droidz
+
+
+// RunCode (make IF statement, add this below it, then the following in a NEW runcode.)
+
+wManager.Wow.Helpers.NpcDB.AcceptOnlyProfileNpc = true;
+
+
+
+// It is not easy way, but add NPC with C# code like this (use this code when you change zone to select good npc for current level/zone):
+
+// RunCode - Removes all NPC's in the NPCDB.
+        wManager.Wow.Helpers.NpcDB.ListNpc.RemoveAll(n => n.CurrentProfileNpc); // Remove in NPCDB all Npc added on current profile 
+
+
+// Setting a "Repair" npc - RunCode
+
+
+        var npcRepair = new wManager.Wow.Class.Npc // Npc repair info
+        {
+            Name = "Npc name",
+            Entry = 1234,
+            Faction = wManager.Wow.Class.Npc.FactionType.Neutral,
+            ContinentId = wManager.Wow.Enums.ContinentId.Azeroth,
+            Position = new robotManager.Helpful.Vector3(1, 2, 3),
+            CanFlyTo = true,
+            Type = wManager.Wow.Class.Npc.NpcType.Repair,
+        };
+        wManager.Wow.Helpers.NpcDB.AddNpc(npcRepair, false, true); // Add npc repair to npcdb
+
+
+// Setting a "Vendor" npc.= (food)
+
+        var npcVendor? = new wManager.Wow.Class.Npc // Npc vendor info
+        {
+            Name = "Npc name",
+            Entry = 1234,
+            Faction = wManager.Wow.Class.Npc.FactionType.Neutral,
+            ContinentId = wManager.Wow.Enums.ContinentId.Azeroth,
+            Position = new robotManager.Helpful.Vector3(1, 2, 3),
+            CanFlyTo = true,
+            Type = wManager.Wow.Class.Npc.NpcType.Vendor,
+        };
+        wManager.Wow.Helpers.NpcDB.AddNpc(npcVendor, false, true); // Add npc vendor to npcdb
+
+// RunCode - Forces bot to go VENDOR -- If you want force WRobot to go to vendor/repair:
+
+wManager.Wow.Bot.States.ToTown.ForceToTown = true;
+
+
+
+__________________________________________________________________________________________________________________________________
+
+// Do Not Sell List (TBC) + Vanilla? - runcode
+
+if (!wManager.wManagerSetting.CurrentSetting.DoNotSellList.Contains(""))
+                    {
+                        wManager.wManagerSetting.CurrentSetting.DoNotSellList.Add("");
+                    }
+
+					
+				
+// Do Not Sell List Vanilla runcode
+
+wManager.wManagerSetting.CurrentSetting.DoNotSellList.Add("Larval Acid");
+
+					
+__________________________________________________________________________________________________________________________________
+
+
+// Opening Objects (Clams, Boxes, Etc) RunCode  - https://wrobot.eu/forums/topic/5684-looting-inventory-item-containing-quest-items/
+
+
+
+Thread t = new Thread(() =>
+{
+    while (robotManager.Products.Products.IsStarted)
+    {
+        if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+        {
+            if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive)
+            {
+      robotManager.Helpful.Keyboard.DownKey(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, System.Windows.Forms.Keys.ShiftKey);
+      Thread.Sleep(robotManager.Helpful.Others.Random(50, 150));
+      ItemsManager.UseItem(7973);
+      Thread.Sleep(robotManager.Helpful.Others.Random(50, 150));
+      robotManager.Helpful.Keyboard.UpKey(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, System.Windows.Forms.Keys.ShiftKey);
+      Thread.Sleep(robotManager.Helpful.Others.Random(50, 150));
+            }
+        }
+        Thread.Sleep(10000);
+    }
+});
+t.Start();
+
+
+// open clam untill Item ammount obtained
+
+Thread t = new Thread(() =>
+{
+    while (robotManager.Products.Products.IsStarted && ItemsManager.GetItemCountById(15874) != 10)
+    {
+        if (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause)
+        {
+            if (ObjectManager.Target.IsValid && ObjectManager.Target.IsAlive)
+            {
+	  robotManager.Helpful.Keyboard.DownKey(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, System.Windows.Forms.Keys.ShiftKey);
+      Thread.Sleep(robotManager.Helpful.Others.Random(50, 150));
+      ItemsManager.UseItem(15874);
+      Thread.Sleep(robotManager.Helpful.Others.Random(50, 150));
+      robotManager.Helpful.Keyboard.UpKey(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, System.Windows.Forms.Keys.ShiftKey);
+      Thread.Sleep(robotManager.Helpful.Others.Random(50, 150));
+            }
+        }
+        Thread.Sleep(1000);
+    }
+});
+t.Start();
+
+__________________________________________________________________________________________________________________________________
+
+
+// Check Bind Location (RunCode)
+
+Lua.LuaDoString<string>("bindlocation = GetBindLocation(); return bindlocation;") == "Allerian Stronghold" 
+&& ObjectManager.Me.Level >= 65 && ObjectManager.Me.Level <= 67 
+&& (wManager.Wow.Helpers.Usefuls.MapZoneName == "Shattrath City") 
+&& Quest.HasQuest(9990)
+
+
+// Check hearthstone timmer
+
+Lua.LuaDoString<bool>("if GetItemCooldown(Heathstone) == 0 then return true end")
+
+
+____________________________________________________________________________________________________________________________
+
+// How to set your Hearthstone, te professional way.
+
+// Step 1 - Set IF Statment.
+IF > IF code in the quest order editor
+
+Lua.LuaDoString<string>("bindlocation = GetBindLocation(); return bindlocation;") != "Orgrimmar"
+
+// Step 2 - RUNCODE - Change the Location + NPC ID of your new innkeeper (using the helper tools)
+
+var position = new Vector3(1633.99f, -4439.37f, 15.43382f);
+int npcEntryId = 6929;
+{
+	if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(position, npcEntryId))
+	System.Threading.Thread.Sleep(1000);
+ 	Lua.LuaDoString("GossipTitleButton1:Click();");
+	System.Threading.Thread.Sleep(2000 * 2);
+	Lua.LuaDoString("StaticPopup1Button1:Click();");
+	System.Threading.Thread.Sleep(3000 * 2);
+	Lua.LuaDoString("StaticPopup1Button1:Click();");
+	Lua.LuaDoString("CloseMerchant()");
+	System.Threading.Thread.Sleep(3000 * 2);
+    if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(position, npcEntryId))
+	System.Threading.Thread.Sleep(3000 * 2);
+	Lua.LuaDoString("GossipTitleButton2:Click();");
+	System.Threading.Thread.Sleep(3000 * 2);
+	Lua.LuaDoString("StaticPopup1Button1:Click();");
+	System.Threading.Thread.Sleep(3000 * 2);
+	Lua.LuaDoString("StaticPopup1Button1:Click();");
+	Lua.LuaDoString("CloseMerchant()");
+}
+
+// ENDIF -- Add an ENDIF Statment.
+//This will force the bot to run to the npc location, it will do each step every 2 seconds (click the bind option) And a 2nd timeincase the bind is on button 2.
+
+
+
+
+// Weaponsmaster Trainer - train Weapons Master - My Code - Andoido - RuNCode
+
+// RunCode 1
+
+if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(2091.02f, -4826.49f, 24.11062f), 11868))
+{
+   Logging.Write("Training level 10 Warlock Weaponsmaster in Orgrimmar - Please do not stop the bot");
+ { 
+Lua.LuaDoString("GossipTitleButton1:Click();");;
+Lua.LuaDoString("StaticPopup1Button1:Click();");
+System.Threading.Thread.Sleep(2000 * 2);
+Lua.LuaDoString("StaticPopup1Button1:Click();");
+System.Threading.Thread.Sleep(2000 * 2);
+Lua.LuaDoString("StaticPopup1Button1:Click();");
+Lua.LuaDoString("StaticPopup1Button1:Click();");
+Lua.LuaDoString("StaticPopup1Button1:Click();");
+Lua.LuaDoString("StaticPopup1Button1:Click();");
+}
+}
+
+//RunCode 2 (Add both 1 and 2) to make sure 100% the bot trains)
+
+
+if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(2091.02f, -4826.49f, 24.11062f), 11868))
+{
+   Logging.Write("Training level 10 Warlock Weaponsmaster in Orgrimmar - Please do not stop the bot - Training Sayoc");
+ { 
+ wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);
+ wManager.Wow.Helpers.Trainer.TrainingSpell();
+System.Threading.Thread.Sleep(1000 * 2);
+ wManager.Wow.Helpers.Trainer.TrainingSpell();
+System.Threading.Thread.Sleep(1000 * 2);
+ wManager.Wow.Helpers.Trainer.TrainingSpell();
+ wManager.Wow.Helpers.Trainer.TrainingSpell();
+ wManager.Wow.Helpers.Trainer.TrainingSpell();
+ wManager.Wow.Helpers.Trainer.TrainingSpell();
+}
+}
+
+____________________________________________________________________________________________________________________________
+
+
+// Weaponsmaster Training - FNV
+
+Vector3 posWeaponSkill = new Vector3(-5039.499, -1201.89, 508.9015);
+int npcId = 13084;
+
+if(ObjectManager.Me.GetMoneyCopper >= 5000)
+{
+
+  Logging.Write("[FNV_Quester]: Going to Ironforge Weapon trainer");
+
+if(!wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(posWeaponSkill, npcId))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(posWeaponSkill, npcId);
+}
+if(wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(posWeaponSkill, npcId))
+{
+Usefuls.SelectGossipOption(GossipOptionsType.trainer);
+Thread.Sleep(Usefuls.Latency + 500);
+Lua.LuaDoString("BuyTrainerService(0)");
+Thread.Sleep(Usefuls.Latency + 500);
+Lua.LuaDoString("BuyTrainerService(0)");
+Thread.Sleep(Usefuls.Latency + 500);
+Lua.LuaDoString("BuyTrainerService(0)");
+Thread.Sleep(Usefuls.Latency + 500);
+Lua.LuaDoString("BuyTrainerService(0)");
+Thread.Sleep(Usefuls.Latency + 500);
+Lua.LuaDoString("BuyTrainerService(0)");
+}
+Logging.Write("[FNV_Quester]: Weapon skills learned");
+}
+else
+{
+Logging.Write("[FNV_Quester]: Not enough money to buy Weapon skills, skip it");
+}
+
+
+____________________________________________________________________________________________________________________________
+
+/ /添加包不出售列表中的所有项目,所有项目在袋子里
+
+        foreach (var woWItem in wManager.Wow.Helpers.Bag.GetBagItem())
+        {
+            if (!string.IsNullOrWhiteSpace(woWItem.Name) && !wManager.wManagerSetting.CurrentSetting.DoNotSellList.Contains(woWItem.Name))
+                wManager.wManagerSetting.CurrentSetting.DoNotSellList.Add(woWItem.Name);
+        }
+
+
+
+/ /放弃所有任务日志
+
+
+for i=1,GetNumQuestLogEntries() do
+	SelectQuestLogEntry(i);
+	SetAbandonQuest();
+	AbandonQuest();
+end
+
+
+
+// Abandon Quest by IDictionary
+
+local questId = 12345;
+for i=1,GetNumQuestLogEntries() do
+	local _, _, _, _, _, _, _, id = GetQuestLogTitle(i);
+	if id == questId then
+		SelectQuestLogEntry(i);
+		SetAbandonQuest();
+		AbandonQuest();
+	end
+end
+
+
+__________________________________________________________________________________________________________________________________
+
+// CUSTOM SCRIPT - Goes into Custom Script Section.
+
+// USAGE - RunCode
+
+throwAway.DeleteItems("Phial of Scrying", 0);
+throwAway.DeleteItems("Gyromast's Key", 0);
+throwAway.DeleteItems("Barrel of Barleybrew Scalder", 0);
+
+
+
+    //Abandon Quests - Custom Script
+    public class abandonQuest
+    {
+
+        public static void abandon(string questName)
+        {
+
+            string name = questName;
+
+            wManager.Wow.Helpers.Lua.LuaDoString("local name = '" + name + "' for i=1,GetNumQuestLogEntries() do local questTitle, level, questTag, suggestedGroup, isHeader, isCollapsed, isComplete = GetQuestLogTitle(i) if string.find(questTitle, name) then SelectQuestLogEntry(i) SetAbandonQuest() AbandonQuest() end end");
+
+
+        }
+
+    }
+
+
+---------------------------------------------------------------------
+    //Throw away items - by Reapler - Custom Script
+    public class throwAway
+    {
+        public static int GetItemQuantity(string itemName)
+        {
+            var execute =
+                "local itemCount = 0; " +
+                "for b=0,4 do " +
+                    "if GetBagName(b) then " +
+                        "for s=1, GetContainerNumSlots(b) do " +
+                            "local itemLink = GetContainerItemLink(b, s) " +
+                            "if itemLink then " +
+                                "local _, stackCount = GetContainerItemInfo(b, s)\t " +
+                                "if string.find(itemLink, \"" + itemName + "\") then " +
+                                    "itemCount = itemCount + stackCount; " +
+                                "end " +
+                            "end " +
+                        "end " +
+                    "end " +
+                "end; " +
+                "return itemCount; ";
+            return Lua.LuaDoString<int>(execute);
+        }
+
+        /// <summary>
+        /// Used to delete all items by name.
+        /// </summary>
+        /// <param name="itemName">The item to delete.</param>
+        /// <param name="leaveAmount">The amount of items which remain in the bag.</param>
+        /// <remarks>Bug at links with "-"</remarks>
+        public static void DeleteItems(string itemName, int leaveAmount)
+        {
+            var itemQuantity = GetItemQuantity(itemName) - leaveAmount;
+            if(string.IsNullOrWhiteSpace(itemName) || itemQuantity <= 0)
+                return;
+            var execute =
+                "local itemCount = " + itemQuantity + "; " +
+                "local deleted = 0; " +
+                "for b=0,4 do " +
+                    "if GetBagName(b) then " +
+                        "for s=1, GetContainerNumSlots(b) do " +
+                            "local itemLink = GetContainerItemLink(b, s) " +
+                            "if itemLink then " +
+                                "local _, stackCount = GetContainerItemInfo(b, s)\t " +
+                                "local leftItems = itemCount - deleted; " +
+                                "if string.find(itemLink, \"" + itemName + "\") and leftItems > 0 then " +
+                                    "if stackCount <= 1 then " +
+                                        "PickupContainerItem(b, s); " +
+                                        "DeleteCursorItem(); " +
+                                        "deleted = deleted + 1; " +
+                                    "else " +
+                                        "if (leftItems > stackCount) then " +
+                                            "SplitContainerItem(b, s, stackCount); " +
+                                            "DeleteCursorItem(); " +
+                                            "deleted = deleted + stackCount; " +
+                                        "else " +
+                                            "SplitContainerItem(b, s, leftItems); " +
+                                            "DeleteCursorItem(); " +
+                                            "deleted = deleted + leftItems; " +
+                                        "end " +
+                                    "end " +
+                                "end " +
+                            "end " +
+                        "end " +
+                    "end " +
+                "end; ";
+            Lua.LuaDoString(execute);
+        }
+    }
+
+
+这是一个自定义的脚本，名为 "throwaway"，用于在魔兽世界游戏中删除指定名称的物品。它包含两个静态方法。
+
+`getitemquantity(string itemname)` 方法获取指定物品名称（itemname）的数量，并返回一个整数。该方法使用一些 lua 脚本代码来遍历玩家背包和银行中的每个格子，然后逐级检查是否存在与物品名称匹配的物品，最后计算出所有找到的项目的总量并返回。
+
+`deleteitems(string itemname, int leaveamount)` 方法使用以下步骤删除指定名称（itemname）的所有物品：
+
+1. 调用 getitemquantity 方法以获取指定物品名称的总量。
+2. 使用 `item
+---------------------------------------------------------------------
+
+// Delete Item from Inventory - RunCode 
+
+/run for bag=0,4,1 do for slot=1,36,1 do local name=GetContainerItemLink(bag,slot);if (name and string.find(name,"Item1")) or (name and string.find(name,"Item2")) then PickupContainerItem(bag,slot);DeleteCursorItem();end;end;end
+
+
+// Destroy / Delete Inventory items - RunLuaCode
+-- Number= = 5, 3, 5, 21, 1, 5 etc of items in inventory to call.
+
+
+number = 1;
+i=1; 
+for bag = 0,4,1 do 
+	for slot = 1, GetContainerNumSlots(bag), 1 do
+		local name = GetContainerItemLink(bag,slot);
+		if name and string.find(name,"An Old History Book") then
+			if i > number then PickupContainerItem(bag,slot);
+			DeleteCursorItem();
+			end;
+		end;
+		i=i+1; 
+	end; 
+end;
+
+
+
+
+__________________________________________________________________________________________________________________________________
+
+
+// Time left on Trinket - By Reapler - https://wrobot.eu/forums/topic/7127-trinket-cooldown-time-left/
+
+    /// <summary>
+    /// Used to get the cooldown of an inventory item.
+    /// </summary>
+    /// <param name="slotId">The slot to get from.</param>
+    /// <returns>The left cooldown of the item.</returns>
+    public int GetInventoryCooldown(WoWInventorySlot slotId)
+    {
+        return Lua.LuaDoString<int>(
+            @"
+            local start, duration, enable = GetInventoryItemCooldown(""player"", "+(int)slotId+@")
+            local coolDown = duration-(GetTime()-start);
+            if (coolDown < 0) then 
+                return 0;
+            end
+            return coolDown;
+            ");
+    }
+
+
+//Usage:
+
+        Logging.Write("Cooldown of Trinket1: "+GetInventoryCooldown(WoWInventorySlot.Trinket1));
+
+
+
+
+
+
+__________________________________________________________________________________________________________________________________
+
+// Desolace Kodo Quest Codes.
+
+// [Is Complete Condition for Quest]
+return wManager.Wow.ObjectManager.ObjectManager.Target.IsValid && wManager.Wow.ObjectManager.ObjectManager.Target.Reaction >= wManager.Wow.Enums.Reaction.Friendly;?
+
+// Target Unit by Name: RunCode
+
+ObjectManager.Me.Target = ObjectManager.GetWoWUnitByName("柯柯的灵魂").First().Guid;
+
+// Face your Position ( do 180) RuNCode
+
+MovementManager.Face(ObjectManager.Me.Position)
+
+
+
+
+__________________________________________________________________________________________________________________________________
+
+// Used to farm (Lockpicking Example - //  OverridePulseCSharpCode   
+                                                                                                                                                                         
+
+if (GoToTask.ToPosition(new Vector3(-1455.473f, -3968.029f, 7.562639f)))
+{
+    while (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause && Skill.GetValue(SkillLine.Lockpicking) < 75)
+    {
+        var obj = ObjectManager.GetObjectWoWGameObject()
+            .FirstOrDefault(o => !wManager.wManagerSetting.IsBlackListed(o.Guid) && o.Entry == 123330 || o.Entry == 123333 || o.Entry == 123331);
+        if (obj != null)
+        {
+            Interact.InteractGameObject(obj.GetBaseAddress);
+            Usefuls.WaitIsCastingAndLooting();
+            Lua.LuaDoString("LootCloseButton:Click();");
+            wManager.wManagerSetting.AddBlackList(obj.Guid, 5000, true);
+        }
+        
+    }
+}
+return true;
+
+__________________________________________________________________________________________________________________________________
+
+
+// Custom code to PickPocket - or used in other situations. - overridePulseCsharpCode
+
+if (!ObjectManager.Me.HaveBuff("Stealth"))
+{
+    Lua.LuaDoString("CastSpellByName('Stealth')");
+}
+
+if (GoToTask.ToPosition(new Vector3(-11104.44, 491.9153, 28.40324)))
+{
+    Conditions.ForceIgnoreIsAttacked = true;
+    var target = ObjectManager.GetObjectWoWUnit().FirstOrDefault(o => o.Entry == 7051);
+    if (target != null)
+    {
+        ObjectManager.Me.Target = target.Guid;
+        if (!ObjectManager.Me.HaveBuff("Stealth"))
+        {
+            Lua.LuaDoString("CastSpellByName('Stealth')");
+        }
+        
+        while (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause && target.GetDistance >= 5)
+        {
+            MovementManager.MoveTo(target.Position);
+            Thread.Sleep(100);
+        }
+        Lua.LuaDoString("CastSpellByName('Pick Pocket')");
+        Thread.Sleep(50);
+        string[] asm = {
+            "call " + (uint)0x4C1FA0,
+            wManager.Wow.Memory.WowMemory.RetnToHookCode
+        };
+        wManager.Wow.Memory.WowMemory.InjectAndExecute(asm);
+        Conditions.ForceIgnoreIsAttacked = false;
+    }
+}
+
+return true;
+
+__________________________________________________________________________________________________________________________________
+
+// Custom code to rup up and Sap a mob and then loot chest for Rogue Poisons Quest - OverridePulseCSharpCode
+
+ if (Quest.IsObjectiveComplete(1, 2359))
+    {
+        return true;
+    }
+
+    Conditions.ForceIgnoreIsAttacked = true;
+    wManager.wManagerSetting.CurrentSetting.MaxUnitsNear = 100;
+    var target = ObjectManager.GetObjectWoWUnit().FirstOrDefault(o => o.Entry == 7053);
+    if (target != null && target.IsAlive)
+    {
+        ObjectManager.Me.Target = target.Guid;
+        if (!ObjectManager.Me.HaveBuff("Stealth"))
+        {
+            Lua.LuaDoString("CastSpellByName('Stealth')");
+        }
+
+        while (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause && target.GetDistance >= 5)
+        {
+            Lua.LuaDoString("CastSpellByName('Sap')");
+            Fight.StopFight();
+            if (target.HaveBuff("Sap"))
+            {
+                Lua.LuaDoString("ClearTarget();");
+            }
+            MovementManager.MoveTo(target.Position);
+            Thread.Sleep(50);
+        }
+        while (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause && !target.HaveBuff("Sap"))
+        {
+            Lua.LuaDoString("CastSpellByName('Sap');");
+            Fight.StopFight();
+            Thread.Sleep(10);
+        }
+
+        if (target.HaveBuff("Sap"))
+        {
+            wManager.wManagerSetting.ClearBlacklistOfCurrentProductSession();
+            var chest = ObjectManager.GetObjectWoWGameObject().FirstOrDefault(o => o.Entry == 123214);
+            if (chest != null)
+            {
+                while (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause && chest.GetDistance >= 5)
+                {
+                    if (target.HaveBuff("Sap"))
+                    {
+                        Lua.LuaDoString("ClearTarget();");
+                        Fight.StopFight();
+                    }
+                    MovementManager.MoveTo(chest.Position);
+                    Thread.Sleep(100);
+                }
+                while (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause 
+                       && !Quest.IsObjectiveComplete(1, 2359) 
+                       && !ObjectManager.Me.IsLooting()
+                       && !ObjectManager.Me.IsCast)
+                {
+                    Lua.LuaDoString("CastSpellByName('Pick Lock');");
+                    Interact.InteractGameObject(chest.GetBaseAddress, true);
+                    Usefuls.WaitIsCastingAndLooting();
+                    string[] asm =
+                    {
+                        "call " + (uint) 0x4C1FA0,
+                        wManager.Wow.Memory.WowMemory.RetnToHookCode
+                    };
+                    wManager.Wow.Memory.WowMemory.InjectAndExecute(asm);
+                }
+            }
+        }
+    }
+   else
+    {
+        var chest = ObjectManager.GetObjectWoWGameObject().FirstOrDefault(o => o.Entry == 123214);
+        if (chest != null)
+        {
+            while (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause && chest.GetDistance >= 5)
+            {
+                MovementManager.MoveTo(chest.Position);
+                Thread.Sleep(100);
+            }
+            while (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause 
+                   && !Quest.IsObjectiveComplete(1, 2359) 
+                   && !ObjectManager.Me.IsLooting()
+                   && !ObjectManager.Me.IsCast)
+            {
+                Lua.LuaDoString("CastSpellByName('Pick Lock');");
+                Interact.InteractGameObject(chest.GetBaseAddress, true);
+                Usefuls.WaitIsCastingAndLooting();
+                string[] asm =
+                {
+                    "call " + (uint) 0x4C1FA0,
+                    wManager.Wow.Memory.WowMemory.RetnToHookCode
+                };
+                wManager.Wow.Memory.WowMemory.InjectAndExecute(asm);
+            }
+        }
+    }
+    if (ObjectManager.Me.IsDead)
+    {
+        Quest.QuesterCurrentContext.CurrentStep = 1;
+    }
+
+
+
+__________________________________________________________________________________________________________________________________
+
+// Buy From Vendor - RunCode
+
+Lua.LuaDoString("BuyMerchantItem(1,1)"); // version 1 
+
+wManager.Wow.Helpers.Vendor.BuyItem("Walking Stick",1); // Version 2 - RunCode
+
+
+// buy specific item from vendor -- OverridePulseCSharpCode
+
+        var npc = new Npc
+        {
+            Entry = 1247,
+            Position = new Vector3(-5601.6, -531.203, 399.6539),
+            Type = Npc.NpcType.Vendor
+        };
+        int itemId = 2894;
+
+        if (GoToTask.ToPositionAndIntecractWith(npc))
+        {
+            Vendor.BuyItem(ItemsManager.GetNameById(itemId), 1);
+        }
+        return true;
+
+
+// Buy item From Vendor + Use that item + Is Specific Class - RunCode  -- https://wrobot.eu/forums/topic/11076-quests-and-buy-equip/
+
+if (ObjectManager.Me.WowClass == WoWClass.class && ObjectManager.Me.Level <= 0) // change "Class" to what class you are. set level to level you want to get item at.
+	{
+	wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(x, y, z), NpcID, 1, false);
+	System.Threading.Thread.Sleep(5000);
+	wManager.Wow.Helpers.Vendor.BuyItem("Skinning Knife",1); // change Skinning Knife to what item you want. do not remove ""
+	System.Threading.Thread.Sleep(5000); 
+	}
+	
+	
+// if has item useitem, hasitem	
+	
+	if (ItemsManager.HasItemById(3108)) // change 3108 to the item id
+			{
+				ItemsManager.UseItem(3108);? // change 3108 to the item id
+			}
+
+
+// 任务购买指定物品- RunCode
+
+if (Quest.HasQuest(375))
+	{
+	wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(2259.73f, 275.571f, 34.83753f), 2118, 1, false);
+	System.Threading.Thread.Sleep(5000);
+	wManager.Wow.Helpers.Vendor.BuyItem("Coarse Thread",1); // change Skinning Knife to what item you want. do not remove ""
+	System.Threading.Thread.Sleep(5000); 
+	}
+
+
+
+// Buy from Vendor - Professional way - RunCode
+
+int npcEntryId = 1464;
+var position = new Vector3(-3827.93f, -831.901f, 10.0906f);
+
+while(!Quest.IsObjectiveComplete?(1, 288))
+{
+
+while(!wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(position, npcEntryId))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(position, npcEntryId);
+}
+
+if(wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(position, npcEntryId))
+{
+Usefuls.SelectGossipOption(GossipOptionsType.vendor);
+Thread.Sleep(Usefuls.Latency + 500);
+if(ItemsManager.GetItemCountById(2594) <= 0)
+{
+Lua.LuaDoString("BuyMerchantItem(8,1)"); //Or use wManager.Wow.Helpers.Vendor.BuyItem("Coarse Thread",1);
+Thread.Sleep(Usefuls.Latency + 500);
+return;
+}
+
+}
+
+}
+
+__________________________________________________________________________________________________________________________________
+
+
+// Buy mount , riding trainer, train riding, buy riding mount - runcode
+
+!wManager.Wow.Helpers.Skill.Has(wManager.Wow.Enums?.SkillLine.Riding) && Lua.LuaDoString<int>("return GetMoney()") >= 1000000
+
+// buy mount from vendor - runcode
+
+int npcEntryId = 4772;
+var pos = new Vector3(-5521.5f, -1347.8f, 398.8f);
+
+if(!wManager.Wow.Helpers.Skill.Has(wManager.Wow.Enums?.SkillLine.Riding))
+{
+
+while(!wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(pos, npcEntryId))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(pos, npcEntryId);
+Thread.Sleep(Usefuls.Latency + 500);
+}
+
+Usefuls.SelectGossipOption(GossipOptionsType.trainer);
+Thread.Sleep(Usefuls.Latency + 500);
+
+Lua.LuaDoString("BuyTrainerService(0)");
+Thread.Sleep(Usefuls.Latency + 500);
+Lua.LuaDoString("CloseTrainer()");
+
+}
+
+
+
+__________________________________________________________________________________________________________________________________
+
+
+
+// FLY - Custom Fly Code ---- FLYING CODE RunCode
+
+var position = new Vector3(-1770.37f, 3262.19f, 5.10852f);
+int npcEntryId = 6726;
+
+if (!ObjectManager.Me.IsOnTaxi)
+{
+    if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(position, npcEntryId))
+    {
+ int node;
+        Usefuls.SelectGossipOption(GossipOptionsType.taxi);
+
+ node = wManager.Wow.Helpers.Lua.LuaDoString<int>("for i=0,30 do if string.find(TaxiNodeName(i),'Orgrimmar') then return i end end");
+          
+        wManager.Wow.Helpers.Lua.LuaDoString("TakeTaxiNode(" + node + ")");
+    }
+}
+
+__________________________________________________________________________________________________________________________________
+
+
+
+// Zangermarsh -- Elevator Code
+
+If
+
+if (ObjectManager.GetWoWGameObjectByyId(183177).FirstOrDefault().GetDistance <= 10) {
+  Logging.Write("Elevator already here.Lets wait - waiting for elevator");
+}
+while (ObjectManager.GetWoWGameObjectByyId(183177).FirstOrDefault().GetDistance <= 10) {Thread.Sleep(500);};
+
+Logging.Write("Waiting for the Tram");
+while (ObjectManager.GetWoWGameObjectByyId(183177).FirstOrDefault().GetDistance > 10) {Thread.Sleep(500);};
+
+
+// step inside the tram
+wManager.Wow.Helpers.Move.Forward(Move.MoveAction.PressKey,1000);
+
+wait 1500
+
+while (ObjectManager.Me.Position.DistanceTo2D( new Vector3(1680.11, -5824.42, 161.518, "186452")) >10) {Thread.Sleep(100);};
+
+wait 100
+
+wManager.Wow.Helpers.Move.Backward(Move.MoveAction.PressKey,5500);
+
+// Custom Follow Path to run away from Elevator
+
+EndIf
+
+
+__________________________________________________________________________________________________________________________________
+
+//  Click Loot Window - Item # 1 ( RunCode )
+
+robotManager.Helpful.Mouse.CurseurWindowPercentagePosition(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, 2, 18);
+robotManager.Helpful.Mouse.ClickLeft();
+
+// Click Loot Window - Item # 2  ( RunCode )
+
+robotManager.Helpful.Mouse.CurseurWindowPercentagePosition(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, 2, 22);
+robotManager.Helpful.Mouse.ClickLeft();
+
+// Mouse Click - Loot window Item # 3  ( RunCode )
+
+robotManager.Helpful.Mouse.CurseurWindowPercentagePosition(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, 2, 26);
+robotManager.Helpful.Mouse.ClickLeft();
+
+// Click Loot Window - Item # 4  ( RunCode )
+
+robotManager.Helpful.Mouse.CurseurWindowPercentagePosition(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, 2, 29);
+robotManager.Helpful.Mouse.ClickLeft();
+
+
+
+   if (wManager.Wow.Helpers.ItemsManager.GetItemCountById(19035) > 0)
+   {
+        wManager.Wow.Helpers.ItemsManager.UseItem(19035);
+        System.Threading.Thread.Sleep(2000);
+		robotManager.Helpful.Mouse.CurseurWindowPercentagePosition(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, 2, 18);
+        robotManager.Helpful.Mouse.ClickLeft();
+		System.Threading.Thread.Sleep(2000);
+		robotManager.Helpful.Mouse.CurseurWindowPercentagePosition(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, 2, 22);
+        robotManager.Helpful.Mouse.ClickLeft();
+		System.Threading.Thread.Sleep(2000);
+		robotManager.Helpful.Mouse.CurseurWindowPercentagePosition(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, 2, 26);
+        robotManager.Helpful.Mouse.ClickLeft();
+		System.Threading.Thread.Sleep(2000);
+		robotManager.Helpful.Mouse.CurseurWindowPercentagePosition(wManager.Wow.Memory.WowMemory.Memory.WindowHandle, 2, 29);
+        robotManager.Helpful.Mouse.ClickLeft();
+   }
+
+
+
+__________________________________________________________________________________________________________________________________
+
+
+// Go to location and Gather - Specific Location and gather / interact - RuNCode
+
+var pos = new Vector3(-4679.763f, -1785.955f, -41.34184f);
+int objectId = 19861;
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(pos, objectId);
+
+Thread.Sleep(Usefuls.Latency + 10000);
+
+if(ItemsManager.GetItemCountById(5791) < 1 && ItemsManager.GetItemCountById(5790) < 1)
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(pos, objectId);
+
+Thread.Sleep(Usefuls.Latency + 10000);
+}
+
+__________________________________________________________________________________________________________________________________
+
+
+// Use Hearthstone version 2.
+
+
+        if (wManager.Wow.Helpers.Usefuls.ContinentId != (int) wManager.Wow.Enums.ContinentId.Azeroth ||
+            wManager.Wow.ObjectManager.ObjectManager.Me.Position.DistanceTo2D(new robotManager.Helpful.Vector3(1, 2, 3)) > 1000)
+        {
+            wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;
+            wManager.Wow.Helpers.ItemsManager.UseItem(6948); // http://www.wowhead.com/item=6948/hearthstone
+            System.Threading.Thread.Sleep(1000 * 20); // 20 secondes
+            wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = true;
+        }
+
+
+// Check timmer on HS
+Lua.LuaDoString<bool>("if GetItemCooldown(Heathstone) == 0 then return true end")
+
+__________________________________________________________________________________________________________________________________
+
+
+// Add target to Blacklist -- For professional Profile creators.. this can cause you some drama!
+
+WoWUnit unit = new WoWUnit(0);
+if (unit.IsValid && !wManager.Wow.ObjectManager.ObjectManager.BlackListObjectManagerGuid.Contains(unit.Guid))
+    wManager.Wow.ObjectManager.ObjectManager.BlackListObjectManagerGuid.Add(unit.Guid);
+
+__________________________________________________________________________________________________________________________________
+
+
+// For dungeons mostly ---- Blacklist looting ALL MOBS, except for the boss (rename 12345, by boss id.) 
+
+var _units = new List<wManager.Wow.ObjectManager.WoWUnit>();
+var tUnit = wManager.Wow.ObjectManager.ObjectManager.GetWoWUnitLootable();
+foreach (var woWUnit in tUnit)
+{
+    if (!wManager.wManagerSetting.IsBlackListedAllConditions(woWUnit) && woWUnit.Entry == 12345)
+        _units.Add(woWUnit);
+}
+if (_units.Count > 0)
+    wManager.Wow.Bot.Tasks.LootingTask.Pulse(_units);
+
+__________________________________________________________________________________________________________________________________
+
+
+// Select gossip option 1 and click all the text after that
+
+var position = new Vector3(-6679.93f, -1194.36f, 240.2135f);
+int npcEntryId = 8479;
+
+
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(position, npcEntryId);
+System.Threading.Thread.Sleep(1000 * 2);
+
+System.Threading.Thread.Sleep(1000 * 2);
+
+Usefuls.SelectGossipOption(1);
+System.Threading.Thread.Sleep(1000 * 2);
+
+Usefuls.SelectGossipOption(1);
+System.Threading.Thread.Sleep(1000 * 2);
+
+Usefuls.SelectGossipOption(1);
+System.Threading.Thread.Sleep(1000 * 2);
+
+Usefuls.SelectGossipOption(1);
+System.Threading.Thread.Sleep(1000 * 2);
+
+wManager.Wow.Helpers.Move.Forward(Move.MoveAction.PressKey, 3000);
+
+
+__________________________________________________________________________________________________________________________________
+
+
+
+// if in Regeneration State - force bot to sitdown - Runcode -- credit - https://wrobot.eu/forums/topic/9777-sitting-during-regeneration/
+
+if (robotManager.Helpful.Logging.Status == "Regeneration")
+{
+  if (!wManager.Wow.ObjectManager.ObjectManager.Me.IsSitting)
+  {
+    wManager.Wow.Helpers.Move.SitStandOrDescend();
+    Thread.Sleep(1000);
+  }??
+}
+
+// Force bot to SIT DOWN
+
+  if (!wManager.Wow.ObjectManager.ObjectManager.Me.IsSitting)
+  {
+    wManager.Wow.Helpers.Move.SitStandOrDescend();
+    Thread.Sleep(1000);
+  }??
+
+__________________________________________________________________________________________________________________________________
+
+
+// Check Reputation Faction level - IF STATEMENT - Rep Faction level
+
+
+Lua.LuaDoString<bool>(@"
+                for factionIndex = 1, GetNumFactions() do
+                local name, description, standingId, bottomValue, topValue, earnedValue, atWarWith, canToggleAtWar,
+                    isHeader, isCollapsed, hasRep, isWatched, isChild, factionID = GetFactionInfo(factionIndex)
+                if name == ""The Mag'har"" and standingId < 4 then
+                        return true
+                end
+                end
+        ")
+__________________________________________________________________________________________________________________________________
+
+
+__________________________________________________________________________________________________________________________________
+
+
+if (!(Quest.HasQuest(12733)) && !(Quest.GetQuestCompleted(12733)) && !(Ob?jectManager.Me.Position.DistanceTo2D(new Vector3(-3095.85f, -2890.54f, 34.583f)) < 50))
+{
+    wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(-3095.85f, -2890.54f, 34.583f), 13476, 1, false);
+	System.Threading.Thread.Sleep(2000);
+	wManager.Wow.Helpers.Vendor.BuyItem("Healing Potion",4);
+	System.Threading.Thread.Sleep(2000);
+	wManager.Wow.Helpers.Vendor.BuyItem("Scroll of Intellect II",2);
+	wManager.Wow.Helpers.Vendor.BuyItem("Scroll of Agility",2);
+	System.Threading.Thread.Sleep(2000);	
+    wManager.Wow.Helpers.ItemsManager.UseItem(2290);
+	System.Threading.Thread.Sleep(2000);	
+    wManager.Wow.Helpers.ItemsManager.UseItem(3012);	
+}
+
+
+
+// Script to accept quest and turn in - manual turn in, manual accept quest
+
+if (!(Quest.HasQuest(12733)) && !(Quest.GetQuestCompleted(12733)) && !(Ob?jectManager.Me.Position.DistanceTo2D(new Vector3(2368.922f, -5776.345f, 151.3674f)) < 20))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(2368.922f, -5776.345f, 151.3674f));
+}
+var u = ObjectManager.GetNearestWoWUnit(ObjectManager.GetWoWUnitByEntry(29047));
+if (u.IsValid)
+{
+    Interact.InteractGameObject(u.GetBaseAddress);
+    wManager.Wow.Helpers.Lua.RunMacroText("/script AcceptQuest();");
+}
+
+if ((Quest.HasQuest(12733)) && !(Quest.IsObjectiveComplete(1, 12733)) && !(ObjectManager.Me.InCombat));
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(2336.52f, -5699.58f, 153.9225f), 28406, 1, false);
+System.Threading.Thread.Sleep(000); 
+wManager.Wow.Helpers.SpellManager.CastSpellByIdLUA(45477);
+}
+
+if (Quest.HasQuest(12733) && !(Quest.GetQuestCompleted(12733)) && !(Ob?jectManager.Me.Position.DistanceTo2D(new Vector3(2368.922f, -5776.345f, 151.3674f)) < 20))
+{
+wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(2368.922f, -5776.345f, 151.3674f));
+}
+if (u.IsValid)
+{
+    Interact.InteractGameObject(u.GetBaseAddress);
+    wManager.Wow.Helpers.Lua.RunMacroText("/click QuestFrameCompleteQuestButton");
+}
+return true;
+
+__________________________________________________________________________________________________________________________________
+
+
+
+// Play sound in game - sound file
+
+// Run Lua Code
+Lua.LuaDoString("PlaySoundFile("Interface\\AddOns\\MyAddOn\\MySound.ogg")");
+
+
+
+// Run Lua Macro
+Lua.RunMacroText("/console Sound_EnableSFX 1");
+
+
+
+// Play sound in wrobot C#
+                            var myPlayer = new System.Media.SoundPlayer
+                            {
+                                SoundLocation = Application.StartupPath + "\\Data\\newWhisper.wav"
+                            };
+                            var tPlay = new robotManager.Helpful.Timer(1000 * 5); // 5 sec = 5000 ms
+                            while (!tPlay.IsReady)
+                            {
+                                myPlayer.PlaySync();
+                            }
+                            myPlayer.Stop();
+
+
+__________________________________________________________________________________________________________________________________
+
+
+// Fishing test - Fishing rotation OverridePulseCSharpCode
+
+ Vector3 pos1 = new Vector3(-1475.103, -226.9858, 4.822745, "Flying");
+float fishRotation = 5.77f;
+uint itemId = 211160;
+
+if (!FishingTask.IsLaunched)
+{
+    if (GoToTask.ToPosition(pos1, 1.5f))
+    {
+        ObjectManager.Me.Rotation = fishRotation;
+        ItemsManager.UseItem(itemId);
+        FishingTask.LoopFish();
+    }
+}
+
+return true; 
+
+
+
+
+__________________________________________________________________________________________________________________________________
+
+
+// Mail Items *custom script* - By Reapler
+
+
+    public static int InteractItems(List<string> itemNames, int interactions = int.MaxValue)
+    {
+        if (!itemNames.Any())
+            return -1;
+        var execute = 
+            "local counter = 0; " +
+            "local leftStacks = 0; " +
+            "for b=0,4 do " +
+            "if GetBagName(b) then " +
+            "for s=1, GetContainerNumSlots(b) do " +
+            "local itemLink = GetContainerItemLink(b, s) " +
+            "if itemLink then " +
+            "local _, stackCount = GetContainerItemInfo(b, s)\t" +
+            "if string.find(itemLink, \""+ itemNames.FirstOrDefault() + "\") ";
+        if (itemNames.Count > 1)
+        {
+            execute = itemNames.Where(obj => itemNames.FirstOrDefault() != obj).Aggregate(execute, (current, obj) => current + "or string.find(itemLink, \"" + obj + "\") ");
+        }
+        execute = execute + 
+                  "then " +
+                  "if (counter < "+interactions+") then " +
+                  "UseContainerItem(b, s); " +
+                  "counter = counter + 1; " +
+                  "else " +
+                  "leftStacks = leftStacks + 1;" +
+                  "end " +
+                  "\tend\tend\tend end end return leftStacks;";
+        return Lua.LuaDoString<int>(execute);
+    }
+
+    /// <summary>
+    /// Sends a mail to a recipient.
+    /// </summary>
+    /// <param name="recipient">The recipient.</param>
+    /// <param name="subject">The subject.</param>
+    /// <param name="itemNames">The items to send as names.</param>
+    /// <returns>true if successful ; false if no mailbox available or stacks are left.</returns>
+    public bool SendItems(string recipient, string subject, List<string> itemNames)
+    {
+        var mailBox = ObjectManager.GetObjectWoWGameObject().FirstOrDefault(i => i.IsMailbox && i.GetDistance <= 5);
+        if (mailBox == null || string.IsNullOrWhiteSpace(recipient))
+            return false;
+        if (subject.Length == 0)
+            subject = "-";
+        if (mailBox)
+        {
+            const int delayMs = 800;
+            var timeOut = DateTime.Now.AddSeconds(40);
+            Interact.InteractGameObject(mailBox.GetBaseAddress);
+            Thread.Sleep(delayMs);
+            Lua.LuaDoString("RunMacroText('/click MailFrameTab2');");
+            Thread.Sleep(delayMs);
+
+            var leftStack = InteractItems(itemNames, 12);
+            Thread.Sleep(delayMs);
+            Lua.LuaDoString($"SendMail(\"{recipient}\",\"{subject}\",\" \");");
+            Thread.Sleep(delayMs*3);
+
+            while (leftStack != 0 && DateTime.Now < timeOut)
+            {
+                leftStack = InteractItems(itemNames, 12);
+                Thread.Sleep(delayMs);
+                Lua.LuaDoString($"SendMail(\"{recipient}\",\"{subject}\",\" \");");
+                Thread.Sleep(delayMs*3);
+            }
+
+            Lua.LuaDoString("CloseMail();");
+            if (leftStack != 0)
+                return false;
+        }
+        return true;
+    }
+	
+	
+	
+	
+	// Usage: runcode
+
+        SendItems("Reapler", "items for you", 
+            new List<string>
+            {
+                "Super Healing Potion",
+                "Heavy Netherweave Bandage",
+                "Super Mana Potion",
+            });
+
+
+__________________________________________________________________________________________________________________________________
+
+
+//runluacode - equip ammo
+
+
+var QuiverAmmoBagsId = new List<int>
+{
+    29143,
+    29144,
+    29118,
+    18714,
+    44447,
+    44448,
+    34105,
+    34106,
+    34099,
+    34100,
+    19319,
+    19320,
+    2662,
+    2663,
+    8217,
+    8218,
+    7371,
+    7372,
+    3604,
+    3605,
+    3573,
+    3574,
+    11362,
+    11363,
+    5439,
+    5441,
+    7278,
+    7279,
+    2101,
+    2102,
+};
+
+var freeSlots = 0;
+var bags = wManager.Wow.ObjectManager.ObjectManager.GetObjectWoWContainer();
+foreach (var b in bags)
+{
+    if (b.IsValid &&
+        QuiverAmmoBagsId.Contains(b.Entry) &&
+        b.Owner == wManager.Wow.ObjectManager.ObjectManager.Me.Guid &&
+        (b.ContainedIn == 0 || b.ContainedIn == wManager.Wow.ObjectManager.ObjectManager.Me.Guid) &&
+        !string.IsNullOrWhiteSpace(b.Name))
+    {
+        freeSlots += Lua.LuaDoString<int>($@"
+                local freeSlots = 0;
+                for bagID = 1, 4 do
+	                if GetBagName(bagID) ~= nil and GetBagName(bagID) == '{b.Name.Replace("'", "\'")}' then
+	                    for s=1,GetContainerNumSlots(bagID) do
+		                    local i = GetContainerItemInfo(bagID,s);
+		                    if not i then
+			                    freeSlots = freeSlots + 1
+		                    end
+	                    end
+	                end
+                end
+                return freeSlots;");
+    }
+}
+
+__________________________________________________________________________________________________________________________________
+
+
+// Polymorph on multiple attackers - Mars -https://wrobot.eu/forums/topic/7541-switch-target-polymorph-switch-to-original-target/?tab=comments#comment-34382
+
+
+List<WoWUnit> attackers = ObjectManager.GetUnitAttackPlayer();
+
+        FightEvents.OnFightLoop += (unit, cancelable) =>
+        {
+            if (attackers.Count > 1 && Polymorph???.KnownSpell && Polymorph???.IsSpellUsable && ObjectManager.Target.GetDistance <= 25 && presence.KnownSpell && presence.IsSpellUsable)
+            {
+                WoWUnit mainTarget = attackers.Where(u => u.HealthPercent == attackers.Min(x => x.HealthPercent)).FirstOrDefault();
+                WoWUnit polyTarget = attackers.Where(u => u.HealthPercent == attackers.Max(x => x.HealthPercent)).FirstOrDefault();
+                if (!polyTarget.HaveBuff("Polymorph") && polyTarget != mainTarget)
+                {
+                    SpellManager.CastSpellByNameOn("Polymorph???", polyTarget.Name);
+                    Usefuls.WaitIsCasting();
+                    return;
+                }
+            }
+        };
+
+
+// secondary - Semiko
+
+	List<WoWUnit> attackers = ObjectManager.GetUnitAttackPlayer();
+        if (attackers.Count > 1)
+        {
+            WoWUnit mainTarget = attackers.Where(u => u.HealthPercent == attackers.Min(x => x.HealthPercent)).FirstOrDefault();
+            WoWUnit polyTarget = attackers.Where(u => u.HealthPercent == attackers.Max(x => x.HealthPercent)).FirstOrDefault();     
+            if (!polyTarget.HaveBuff("Polymorph") && polyTarget != mainTarget)
+            {
+                Interact.InteractGameObject(polyTarget.GetBaseAddress);
+                SpellManager.CastSpellByNameLUA("Polymorph");
+                Thread.Sleep(500);
+                Interact.InteractGameObject(mainTarget.GetBaseAddress);
+            }       
+        }
+		
+		
+__________________________________________________________________________________________________________________________________
+
+
+// the missing diplomat 
+
+CAN CONDITION
+return Quests.hasFailed("The Missing Diplomat");
+
+// IS COMPLETE
+
+return Quests.isComplete("The Missing Diplomat") || Quests.hasFailed("The Missing Diplomat");
+
+		
+// isfailed custom script code - timmer quests - run code	
+		
+if(!Quest.GetQuestCompleted(1447))
+{
+
+bool missingDiplomatFailed = false;
+
+if(Quests.isFailed("The Missing Diplomat"))
+{
+Logging.Write("Quest failed. Going to abandon and restart, hold on...");
+missingDiplomatFailed = true;
+Thread.Sleep(Usefuls.Latency + 2000);
+Quests.abandon("The Missing Diplomat");
+Thread.Sleep(Usefuls.Latency + 10000);
+}
+
+if(wManager.Wow.Helpers.FinishedQuestsSettings.CurrentSetting.FinishedQuest.Contains(1447) && missingDiplomatFailed)
+{
+Logging.Write("[FNV_Quester]: Going to remove The Missing Diplomat from the list of finished quest ids...");
+Thread.Sleep(Usefuls.Latency + 500);
+wManager.Wow.Helpers.FinishedQuestsSettings.CurrentSetting.FinishedQuest.Remove(1447);
+Thread.Sleep(Usefuls.Latency + 500);
+Logging.Write("[FNV_Quester]: Success? A: " + !wManager.Wow.Helpers.FinishedQuestsSettings.CurrentSetting.FinishedQuest.Contains(1447));
+
+}
+
+}
+	
+__________________________________________________________________________________________________________________________________
+
+	
+// Next RunCode for IsFailed
+
+
+wManager.wManagerSetting.ClearBlacklistOfCurrentProductSession();
+wManager.Wow.Helpers.Conditions.ForceIgnoreIsAttacked = false;
+
+Thread d = new Thread(() =>
+{    
+
+while(!Quest.HasQuest(1447) && !Quest.GetQuestCompleted(1447))
+{
+Thread.Sleep(100);
+}
+  if(Quest.HasQuest(1447))
+{
+while(ObjectManager.Me.WowClass == WoWClass.Druid && !ObjectManager.Me.HaveBuff("Bear Form") && !ObjectManager.Me.HaveBuff("Cat Form"))
+{
+Thread.Sleep(25);
+Logging.Write("[FNV_Quester]: Forcing Bear Form");
+Lua.LuaDoString("CastSpellByName('Bear Form')");
+Thread.Sleep(500);
+break;
+}
+}
+
+ 
+});
+
+if(ObjectManager.Me.WowClass == WoWClass.Druid)
+d.Start();
+		
+---------------
+
+// Pickup Quest
+// Pulse Quest
+
+// RunCode
+if(!Quest.GetQuestCompleted(1447))
+{
+
+if(!Quests.hasFailed("The Missing Diplomat") && !Quests.isComplete("The Missing Diplomat"))
+{
+int npcId = 4961;
+Vector3 pos = new Vector3(-8681.17, 433.618, 99.8117);
+
+var unit = ObjectManager.GetWoWUnitByEntry(npcId).FirstOrDefault();
+
+
+wManager.wManagerSetting.ClearBlacklistOfCurrentProductSession();
+
+ObjectManager.Me.Target = unit.Guid;
+
+Fight.StartFight();
+}
+
+}
+
+// if quest
+
+Quests.isComplete("The Missing Diplomat")
+
+//turn in quest
